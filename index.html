@@ -220,13 +220,20 @@
             <h2 class="section-title" style="margin-top:0">Request early access</h2>
             <p class="muted">Tell us about your program and toolchain. We’re onboarding OEMs, suppliers, and integrators now.</p>
           </div>
-          <form action="https://formspree.io/f/mwpqazlb" method="POST" style="display:grid; gap:12px">
-            <input required name="name" placeholder="Name" aria-label="Name" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
-            <input required type="email" name="email" placeholder="Work email" aria-label="Email" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
-            <input name="company" placeholder="Company" aria-label="Company" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
-            <textarea name="notes" placeholder="What are you building? Tooling today?" rows="3" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);"></textarea>
-            <button class="btn primary" type="submit" style="justify-self:start">Request access</button>
-            <small class="muted">By submitting, you agree to be contacted about Castora. We won’t share your info.</small>
+          <form
+            action="https://formspree.io/f/mwpqazlb"
+            method="POST"
+          >
+            <label>
+              Your email:
+              <input type="email" name="email">
+            </label>
+            <label>
+              Your message:
+              <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>
