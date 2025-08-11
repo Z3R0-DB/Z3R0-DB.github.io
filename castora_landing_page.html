@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Castora — From Concept to Contract</title>
+  <meta name="description" content="Castora: Systems Engineering made verifiable, consistent, and complete — today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #E9E6E8;  /* light */
+      --ink: #363C4C; /* slate */
+      --accent: #B69F56; /* gold */
+      --muted: #7E90A0; /* blue-gray */
+      --rose: #855A70; /* rose */
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(54,60,76,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+    }
+    a{color:var(--ink); text-decoration:none}
+    .container{width:min(1120px, 92%); margin-inline:auto}
+    /* Nav */
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px);
+      background: color-mix(in oklab, var(--bg), white 40% / 70%);
+      border-bottom:1px solid color-mix(in oklab, var(--muted), white 75%);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:12px; align-items:center}
+    .brand img{height:36px; width:auto; filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))}
+    .brand .wordmark{font-family: Unbounded, Inter, sans-serif; font-weight:700; letter-spacing:.2px}
+    .nav a.cta{padding:.65rem 1rem; border-radius:999px; background:var(--accent); color:#111; font-weight:600; box-shadow:var(--shadow)}
+    .nav a.cta:hover{transform:translateY(-1px)}
+
+    /* Hero */
+    .hero{display:grid; align-items:center; grid-template-columns: 1.1fr .9fr; gap:48px; padding:72px 0}
+    .kicker{font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+    h1{font-family: Unbounded, Inter, sans-serif; font-size: clamp(2.2rem, 2.4vw + 1.8rem, 3.5rem); line-height:1.12; margin:.35rem 0 1rem}
+    .lede{font-size:1.15rem; color: color-mix(in oklab, var(--ink), var(--muted) 40%)}
+    .pills{display:flex; flex-wrap:wrap; gap:.6rem; margin:1.25rem 0 2rem}
+    .pill{border:1px solid color-mix(in oklab, var(--muted), white 65%); padding:.5rem .75rem; border-radius:999px; font-weight:600; background:white; color:var(--ink)}
+    .primary-actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{padding:.9rem 1.1rem; border-radius:12px; font-weight:700; border:1.5px solid transparent; transition:.2s ease; box-shadow:var(--shadow)}
+    .btn.primary{background:var(--ink); color:white}
+    .btn.primary:hover{transform:translateY(-2px)}
+    .btn.alt{background:white; border-color: color-mix(in oklab, var(--muted), white 60%)}
+    .btn.alt:hover{border-color: var(--ink)}
+    .hero-card{background:linear-gradient(135deg, color-mix(in oklab, var(--rose), white 70%), white 85%); border:1px solid color-mix(in oklab, var(--muted), white 70%); border-radius: var(--radius); padding:28px; box-shadow:var(--shadow)}
+    .hero-card h3{margin:0 0 .5rem}
+    .stat{display:flex; align-items:center; gap:14px; padding:12px 0}
+    .stat .dot{height:10px; width:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px color-mix(in oklab, var(--accent), white 70%)}
+
+    /* Value grid */
+    section{padding:80px 0}
+    .section-title{font-family: Unbounded, Inter, sans-serif; font-size:clamp(1.6rem, 1.1vw + 1.2rem, 2.2rem)}
+    .muted{color: var(--muted)}
+    .grid{display:grid; gap:18px; grid-template-columns: repeat(3, 1fr); margin-top:28px}
+    .card{background:white; border:1px solid color-mix(in oklab, var(--muted), white 60%); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .card h4{margin:0 0 .4rem}
+    .tag{display:inline-block; font-size:.78rem; font-weight:700; color:#111; background:var(--accent); padding:.35rem .55rem; border-radius:7px; margin-bottom:.7rem}
+
+    /* Timeline */
+    .timeline{position:relative; margin-top:36px}
+    .rail{position:absolute; left:12px; top:0; bottom:0; width:3px; background: color-mix(in oklab, var(--muted), white 40%)}
+    .step{display:grid; grid-template-columns: 40px 1fr; gap:16px; margin-bottom:26px}
+    .bullet{height:24px; width:24px; border-radius:50%; border:3px solid white; background:var(--rose); box-shadow:var(--shadow); margin-top:2px}
+    .step h5{margin:.2rem 0 .25rem}
+
+    /* Footer */
+    footer{padding:36px 0 60px; border-top:1px solid color-mix(in oklab, var(--muted), white 70%); background: linear-gradient(180deg, transparent, #fff)}
+    .footer-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center}
+    .sm{font-size:.95rem}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr; padding:48px 0}
+      .grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <!-- Place castora_logo.png in the same folder or update the src path -->
+        <img src="castora_logo.png" alt="Castora logo" />
+        <div class="wordmark">Castora</div>
+      </div>
+      <nav style="display:flex; gap:18px; align-items:center">
+        <a href="#features">Features</a>
+        <a href="#flow">Flow</a>
+        <a href="#contact" class="cta">Request access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <div class="kicker">Systems Engineering</div>
+        <h1>From Concept to Contract</h1>
+        <p class="lede">Verifiable, consistent, and complete system specifications — <strong>today</strong>. Castora helps you capture intent, prove coverage, and share a single source of truth from requirements to signed agreements.</p>
+        <div class="pills">
+          <span class="pill">Model‑based specs</span>
+          <span class="pill">Traceability</span>
+          <span class="pill">Verification</span>
+          <span class="pill">Change control</span>
+          <span class="pill">Stakeholder views</span>
+        </div>
+        <div class="primary-actions">
+          <a class="btn primary" href="#contact">Get early access</a>
+          <a class="btn alt" href="#features">See how it works</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3 style="margin-top:0">Why teams use Castora</h3>
+        <div class="stat"><span class="dot"></span><div><strong>Reduce rework</strong><br/><span class="muted">Catch ambiguity and gaps before they hit the build.</span></div></div>
+        <div class="stat"><span class="dot"></span><div><strong>Prove completeness</strong><br/><span class="muted">Coverage metrics tie requirements to tests and contracts.</span></div></div>
+        <div class="stat"><span class="dot"></span><div><strong>Speak one language</strong><br/><span class="muted">Consistent templates, terms, and definitions across programs.</span></div></div>
+      </aside>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <h2 class="section-title">Make specifications that stand up in court and on the test bench</h2>
+        <p class="muted">Castora blends rigorous systems engineering with pragmatic tooling so OEMs, suppliers, and integrators can align on exactly what will be built—and how we’ll prove it.</p>
+        <div class="grid">
+          <div class="card">
+            <span class="tag">Verifiable</span>
+            <h4>Executable requirements</h4>
+            <p>Write requirements with checkable semantics. Generate acceptance criteria and test stubs directly from the spec.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Consistent</span>
+            <h4>Unified glossary & patterns</h4>
+            <p>Enforce terminology, units, and patterns across teams. Flag contradictions and undefined terms instantly.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Complete</span>
+            <h4>Coverage you can defend</h4>
+            <p>Trace from stakeholder intent to validation artifacts with gap analysis and clarity scores.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Connected</span>
+            <h4>Toolchain friendly</h4>
+            <p>Import/export to ReqIF, DOORS/Jama, Git, and Markdown. Keep source control in the loop.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Collaborative</span>
+            <h4>Reviews that matter</h4>
+            <p>Structured review cycles with rationale, redlines, and decision logs tied to the requirement record.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Contract-ready</span>
+            <h4>Publish to contract</h4>
+            <p>Freeze a baseline, generate a clean, numbered schedule of requirements with sign‑off trails.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" style="background:white">
+      <div class="container">
+        <h2 class="section-title">Concept → Architecture → Specification → Verification → Contract</h2>
+        <p class="muted">A straight line from discovery to signature, with evidence at every step.</p>
+        <div class="timeline">
+          <div class="rail" aria-hidden="true"></div>
+          <div class="step">
+            <div class="bullet" style="background:var(--accent)"></div>
+            <div>
+              <h5>1. Capture intent</h5>
+              <p>Stakeholder goals, constraints, and scenarios become structured artifacts with IDs on day one.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="bullet"></div>
+            <div>
+              <h5>2. Structure & decompose</h5>
+              <p>Decompose functions and interfaces with reusable patterns; auto‑check consistency and units.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="bullet"></div>
+            <div>
+              <h5>3. Verify while writing</h5>
+              <p>Executable clauses generate tests and coverage; gaps surface as you type.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="bullet"></div>
+            <div>
+              <h5>4. Baseline & publish</h5>
+              <p>Freeze a version, export to PDF/Word/ReqIF, and route for approval with traceable sign‑off.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="bullet" style="background:var(--ink)"></div>
+            <div>
+              <h5>5. Contract with confidence</h5>
+              <p>Negotiate from an evidence‑backed spec. Every clause maps to validations and change history.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="card" style="display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center">
+          <div>
+            <h2 class="section-title" style="margin-top:0">Request early access</h2>
+            <p class="muted">Tell us about your program and toolchain. We’re onboarding OEMs, suppliers, and integrators now.</p>
+          </div>
+          <form action="https://formspree.io/f/your-form-id" method="POST" style="display:grid; gap:12px">
+            <input required name="name" placeholder="Name" aria-label="Name" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
+            <input required type="email" name="email" placeholder="Work email" aria-label="Email" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
+            <input name="company" placeholder="Company" aria-label="Company" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
+            <textarea name="notes" placeholder="What are you building? Tooling today?" rows="3" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);"></textarea>
+            <button class="btn primary" type="submit" style="justify-self:start">Request access</button>
+            <small class="muted">By submitting, you agree to be contacted about Castora. We won’t share your info.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        <img src="castora_logo.png" alt="Castora logo" />
+        <div>
+          <div class="wordmark" style="font-size:1.1rem">Castora</div>
+          <div class="sm muted">Verifiable, Consistent, and Complete.</div>
+        </div>
+      </div>
+      <div class="sm" style="justify-self:end">
+        <a href="#" class="muted" style="margin-right:12px">Privacy</a>
+        <a href="#" class="muted" style="margin-right:12px">Terms</a>
+        <span class="muted">© <span id="year"></span> Castora</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // set current year, smooth scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
+      })
+    })
+  </script>
+</body>
+</html>
