@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request A Demo — Castora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #E9E6E8;
+      --ink: #363C4C;
+      --accent: #B69F56;
+      --muted: #7E90A0;
+      --rose: #855A70;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(54,60,76,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+    }
+    a{color:var(--ink); text-decoration:none}
+    .container{width:min(700px,92%);margin:48px auto;}
+    .card{background:white; border-radius:16px; box-shadow:0 10px 30px rgba(54,60,76,.15); padding:36px;}
+    h1{font-family:Unbounded,Inter,sans-serif; font-size:2.2rem; margin-bottom:1.2rem;}
+    .back{margin-bottom:24px; display:inline-block;}
+    /* Nav styles from index.html */
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px);
+      background: color-mix(in oklab, var(--bg), white 40% / 70%);
+      border-bottom:1px solid color-mix(in oklab, var(--muted), white 75%);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:12px; align-items:center}
+  .brand img{height:41.4px; width:auto; filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))} /* 36px * 1.15 */
+  .brand .wordmark{font-family: Unbounded, Inter, sans-serif; font-weight:700; letter-spacing:.2px; font-size:1.15em}
+    .nav a.cta{padding:.65rem 1rem; border-radius:999px; background:var(--accent); color:#111; font-weight:600; box-shadow:var(--shadow)}
+    .nav a.cta:hover{transform:translateY(-1px)}
+    .btn{padding:.9rem 1.1rem; border-radius:12px; font-weight:700; border:1.5px solid transparent; transition:.2s ease; box-shadow:var(--shadow)}
+    .btn.primary{background:var(--ink); color:white}
+    .btn.primary:hover{transform:translateY(-2px)}
+    .btn.alt{background:white; border-color: color-mix(in oklab, var(--muted), white 60%)}
+    .btn.alt:hover{border-color: var(--ink)}
+    @media (max-width: 900px){
+      .nav{flex-direction:column; gap:10px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" style="text-decoration:none">
+        <img src="castora_logo.png" alt="Castora logo" />
+        <div class="wordmark">Castora Systems</div>
+      </a>
+      <nav style="display:flex; gap:18px; align-items:center">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#logos">Team</a>
+        <a href="index.html#faq">FAQ</a>
+  <a href="contact.html" style="background:#7E90A0; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request A Demo</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h1>Request A Demo</h1>
+      <form id="castora-contact" action="https://script.google.com/macros/s/AKfycbzi2Up1TGK944OziJ3_9gufUPcoL9G46nprP90Xu5WtOBUrajBLuZNswKjsAwsLJosu8g/exec" method="POST" style="display:grid; gap:20px;">
+        <label style="font-weight:600; margin-bottom:4px;" for="name">Name <span style="color:var(--rose)">*</span></label>
+        <input name="name" id="name" type="text" required style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%); font-size:1rem;" placeholder="Your name" />
+
+        <label style="font-weight:600; margin-bottom:4px;" for="email">Email <span style="color:var(--rose)">*</span></label>
+        <input name="email" id="email" type="email" required style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%); font-size:1rem;" placeholder="you@email.com" />
+
+        <label style="font-weight:600; margin-bottom:4px;" for="company">Company</label>
+        <input name="company" id="company" type="text" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%); font-size:1rem;" placeholder="Company (optional)" />
+
+        <button class="btn primary" type="submit" style="margin-top:10px; width:fit-content;">Submit</button>
+        <small class="muted">By submitting, you agree to be contacted about Castora Systems. We won’t share your info.</small>
+      </form>
+      <div id="thankyou" style="display:none; text-align:center; padding:32px 0 0 0;">
+          <h2 style="color:#000; font-family:Unbounded,Inter,sans-serif;">Thank you!</h2>
+          <p>We'll be in contact soon.</p>
+      </div>
+  <script>
+    const FORM_URL = "https://script.google.com/macros/s/AKfycbzi2Up1TGK944OziJ3_9gufUPcoL9G46nprP90Xu5WtOBUrajBLuZNswKjsAwsLJosu8g/exec";
+    document.getElementById('castora-contact').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      fetch(FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: data
+      }).then(() => {
+        form.style.display = 'none';
+        document.getElementById('thankyou').style.display = 'block';
+      }).catch(() => {
+        form.style.display = 'none';
+        document.getElementById('thankyou').innerHTML = "<h2>Something went wrong.</h2><p>Please try again later.</p>";
+        document.getElementById('thankyou').style.display = 'block';
+      });
+    });
+  </script>
+    </div>
+  </div>
+</body>
+</html>

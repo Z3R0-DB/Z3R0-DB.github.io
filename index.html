@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Castora — From Concept to Contract</title>
+  <title>Castora — The co-pilot every systems engineer needs</title>
   <meta name="description" content="Castora: Systems Engineering made verifiable, consistent, and complete — today." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,15 +90,15 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">
-        <!-- Place castora_logo.png in the same folder or update the src path -->
-        <img src="castora_logo.png" alt="Castora logo" />
-        <div class="wordmark">Castora</div>
-      </div>
+      <a class="brand" href="index.html" style="text-decoration:none">
+        <img src="castora_logo.png" alt="Castora logo" style="height:41.4px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
+        <div class="wordmark" style="font-size:1.15em">Castora Systems</div>
+      </a>
       <nav style="display:flex; gap:18px; align-items:center">
         <a href="#features">Features</a>
-        <a href="#flow">Flow</a>
-        <a href="#contact" class="cta">Request access</a>
+        <a href="#logos">Team</a>
+  <a href="#faq">FAQ</a>
+  <a href="contact.html" style="background:#7E90A0; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request A Demo</a>
       </nav>
     </div>
   </header>
@@ -106,68 +106,92 @@
   <main>
     <section class="container hero">
       <div>
-        <div class="kicker">Systems Engineering</div>
-        <h1>From Concept to Contract</h1>
-        <p class="lede">Verifiable, consistent, and complete system specifications — <strong>today</strong>. Castora helps you capture intent, prove coverage, and share a single source of truth from requirements to signed agreements.</p>
-        <div class="pills">
-          <span class="pill">Model‑based specs</span>
-          <span class="pill">Traceability</span>
-          <span class="pill">Verification</span>
-          <span class="pill">Change control</span>
-          <span class="pill">Stakeholder views</span>
-        </div>
+        <div class="kicker">AI for Systems Engineers</div>
+        <h1>The co-pilot every systems engineer needs</h1>
+        <p class="lede">Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — faster and more consistently. Try it for free.</p>
         <div class="primary-actions">
-          <a class="btn primary" href="#contact">Get early access</a>
-          <a class="btn alt" href="#features">See how it works</a>
+            <a href="contact.html" style="background:#7E90A0; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request A Demo</a>
+            <!-- <a class="btn alt" href="#features">See how it works</a> -->
         </div>
       </div>
       <aside class="hero-card">
-        <h3 style="margin-top:0">Why teams use Castora</h3>
-        <div class="stat"><span class="dot"></span><div><strong>Reduce rework</strong><br/><span class="muted">Catch ambiguity and gaps before they hit the build.</span></div></div>
-        <div class="stat"><span class="dot"></span><div><strong>Prove completeness</strong><br/><span class="muted">Coverage metrics tie requirements to tests and contracts.</span></div></div>
-        <div class="stat"><span class="dot"></span><div><strong>Speak one language</strong><br/><span class="muted">Consistent templates, terms, and definitions across programs.</span></div></div>
+        <h3 style="margin-top:0">What Castora does</h3>
+        <div class="stat"><span class="dot"></span><div><strong>Draft, check, and refine requirements</strong><br/><span class="muted">Evaluate subsystem reuse, refine existing requirements, and develop new requirements - fast</span></div></div>
+        <div class="stat"><span class="dot"></span><div><strong>Integrates with your workflow</strong><br/><span class="muted">Ingests DOORS, Jama, docs and more. Outputs structured, testable requirements.</span></div></div>
+        <div class="stat"><span class="dot"></span><div><strong>Speeds up teams</strong><br/><span class="muted">Ship requirements in weeks, not months or years.</span></div></div>
       </aside>
+    </section>
+    <!-- Screenshot section -->
+    <section class="container" style="padding:0 0 48px 0; text-align:center">
+      <iframe src="https://drive.google.com/file/d/1j85ybc9daycEmFxqcuX1JYsQpDmx4EiO/preview" width="800" height="450" allow="autoplay" style="max-width:100%; border-radius:16px; box-shadow:0 8px 32px rgba(54,60,76,.13); margin:0 auto; border:none;"></iframe>
+    </section>
+    <!-- Company logo carousel -->
+    <section id="logos" class="container" style="padding:0 0 48px 0; text-align:center">
+      <div class="muted" style="margin-top:12px; font-size:2rem; color:var(--muted); font-weight:600; margin-bottom:18px;">Built by systems and product leaders from</div>
+      <div style="display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap;">
+        <img src="Google_2015_logo.svg.webp" alt="Google" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
+        <img src="Cruise_logo.svg.png" alt="Cruise" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
+        <img src="TexasInstruments-Logo.svg.png" alt="TI" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
+        <img src="images.png" alt="GM" style="height:48px; max-width:180px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
+      </div>
+
     </section>
 
     <section id="features">
       <div class="container">
-        <h2 class="section-title">Make specifications that stand up in court and on the test bench</h2>
-        <p class="muted">Castora blends rigorous systems engineering with pragmatic tooling so OEMs, suppliers, and integrators can align on exactly what will be built—and how we’ll prove it.</p>
+        <h2 class="section-title">Features</h2>
         <div class="grid">
           <div class="card">
-            <span class="tag">Verifiable</span>
-            <h4>Executable requirements</h4>
-            <p>Write requirements with checkable semantics. Generate acceptance criteria and test stubs directly from the spec.</p>
+            <span class="tag">Subsystem Reuse</span>
+            <h4>Analyze Subsystem Reuse</h4>
+            <p>Get recommendations and alternatives on how to reuse a given subsystem in a new system.</p>
           </div>
           <div class="card">
-            <span class="tag">Consistent</span>
-            <h4>Unified glossary & patterns</h4>
-            <p>Enforce terminology, units, and patterns across teams. Flag contradictions and undefined terms instantly.</p>
+            <span class="tag">Refine</span>
+            <h4>Refine existing requirements</h4>
+            <p>See a report outlining how your requirements need to change to be axiomatic and logically consistent.</p>
           </div>
           <div class="card">
-            <span class="tag">Complete</span>
-            <h4>Coverage you can defend</h4>
-            <p>Trace from stakeholder intent to validation artifacts with gap analysis and clarity scores.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Connected</span>
-            <h4>Toolchain friendly</h4>
-            <p>Import/export to ReqIF, DOORS/Jama, Git, and Markdown. Keep source control in the loop.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Collaborative</span>
-            <h4>Reviews that matter</h4>
-            <p>Structured review cycles with rationale, redlines, and decision logs tied to the requirement record.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Contract-ready</span>
-            <h4>Publish to contract</h4>
-            <p>Freeze a baseline, generate a clean, numbered schedule of requirements with sign‑off trails.</p>
+            <span class="tag">Build</span>
+            <h4>Build new system</h4>
+            <p>Generate requirements for a new or next-gen system based on your documentation and guidance.</p>
           </div>
         </div>
       </div>
     </section>
-
+    <!-- <section id="pricing" class="container" style="text-align:center; padding:64px 0 32px 0">
+      <h2 class="section-title">Become a 10x systems engineer</h2>
+      <div class="muted" style="font-size:1.2rem; margin-bottom:18px">For just <strong>$10 / month</strong></div>
+      <div style="font-size:1.1rem; margin-bottom:24px">We've made Castora affordable so that all systems engineers can supercharge their work.</div>
+      <a class="btn primary" href="#signup">Start your free trial</a>
+    </section> -->
+    <section id="faq" class="container" style="padding:64px 0">
+      <h2 class="section-title">FAQ</h2>
+      <div style="max-width:700px; margin:auto; text-align:left;">
+        <details style="margin-bottom:18px"><summary><strong>Is my information private?</strong></summary>
+          <div>We only use the information you submit to serve and improve the product, we will not sell or distribute your data.</div>
+        </details>
+        <details style="margin-bottom:18px"><summary><strong>Do you train your LLM on my data?</strong></summary>
+          <div>The models we use do not train on submitted data. You can read more about these APIs here.</div>
+        </details>
+        <!-- <details style="margin-bottom:18px"><summary><strong>What is your privacy policy?</strong></summary>
+          <div>You can find our privacy policy and terms of service <a href="#" id="privacy-link">here</a>.</div>
+        </details> -->
+        <details style="margin-bottom:18px"><summary><strong>Why is Castora better than ChatGPT or Gemini for Systems Engineers?</strong></summary>
+          <div>Castora has been created to be consistently reliable when generating and evaluating requirements, even when the context window & amount of information gets extremely large. It is less likely to omit certain details, reducing your risk of creating logically inconsistent requirements due to “forgetting” details, because it leverages multiple models and coordinates between them. Try it out and compare - we think you will like what you see!</div>
+        </details>
+        <details style="margin-bottom:18px"><summary><strong>Why shouldn’t I just create my own version of this?</strong></summary>
+          <div>You could create a GPT or Gem, but then you’d have to build it. We already did the hard work! Training it on systems engineering logic, standards, and verification methods, building custom workflows to ingest/export DOORS, Jama, etc., and spend time validating its reliability and accuracy. Speed up your workflows today, with Castora!</div>
+        </details>
+        <details style="margin-bottom:18px"><summary><strong>Who is the team behind Castora?</strong></summary>
+          <div>Castora was created by Kurt VonEhr & Kayiita Johansson. Kurt is an experienced systems engineering lead who’s shipped vehicles, autonomous vehicles, and robotics. Kayiita Johansson is a product leader who’s shipped smart thermostats, health devices, autonomous vehicles and gaming devices. We know firsthand the challenges systems engineers and their cross-functional teams face, and are excited to solve this for you!</div>
+        </details>
+        <details style="margin-bottom:18px"><summary><strong>Can this be used by teams? Do you have an enterprise plan?</strong></summary>
+          <div>Castora is great for teams, and we'd love to talk to you about a plan. Email us at <a href="mailto:kurt@castora.systems">kurt@castora.systems</a> to discuss what you need!</div>
+        </details>
+      </div>
+    </section>
+    <!---
     <section id="flow" style="background:white">
       <div class="container">
         <h2 class="section-title">Concept → Architecture → Specification → Verification → Contract</h2>
@@ -211,26 +235,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="contact">
-      <div class="container">
-        <div class="card" style="display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center">
-          <div>
-            <h2 class="section-title" style="margin-top:0">Request early access</h2>
-            <p class="muted">Tell us about your program and toolchain. We’re onboarding OEMs, suppliers, and integrators now.</p>
-          </div>
-          <form action="https://formspree.io/f/your-form-id" method="POST" style="display:grid; gap:12px">
-            <input required name="name" placeholder="Name" aria-label="Name" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
-            <input required type="email" name="email" placeholder="Work email" aria-label="Email" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
-            <input name="company" placeholder="Company" aria-label="Company" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);">
-            <textarea name="notes" placeholder="What are you building? Tooling today?" rows="3" style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%);"></textarea>
-            <button class="btn primary" type="submit" style="justify-self:start">Request access</button>
-            <small class="muted">By submitting, you agree to be contacted about Castora. We won’t share your info.</small>
-          </form>
-        </div>
-      </div>
-    </section>
+  <!-- Contact section removed; now a separate page. -->
   </main>
 
   <footer>
@@ -238,13 +245,17 @@
       <div class="brand">
         <img src="castora_logo.png" alt="Castora logo" />
         <div>
-          <div class="wordmark" style="font-size:1.1rem">Castora</div>
-          <div class="sm muted">Verifiable, Consistent, and Complete.</div>
+          <div class="wordmark" style="font-size:1.1rem">Castora Systems</div>
+          <div class="sm muted">The co-pilot every systems engineer needs</div>
         </div>
       </div>
       <div class="sm" style="justify-self:end">
+        <a href="#features" class="muted" style="margin-right:12px">Features</a>
+        <a href="#logos" class="muted" style="margin-right:12px">Team</a>
+        <a href="#faq" class="muted" style="margin-right:12px">FAQ</a>
+        <!-- <a href="contact.html" class="muted" style="margin-right:12px">Contact</a>
         <a href="#" class="muted" style="margin-right:12px">Privacy</a>
-        <a href="#" class="muted" style="margin-right:12px">Terms</a>
+        <a href="#" class="muted" style="margin-right:12px">Terms</a> -->
         <span class="muted">© <span id="year"></span> Castora</span>
       </div>
     </div>
