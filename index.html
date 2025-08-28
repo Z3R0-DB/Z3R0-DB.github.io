@@ -85,6 +85,9 @@
       .grid{grid-template-columns:1fr;}
       .footer-grid{grid-template-columns:1fr}
     }
+  /* Icon styles (feather icons will replace elements with data-feather) */
+  svg.feather{height:20px; width:20px; vertical-align:middle; margin-right:8px; stroke:currentColor}
+  svg.feather.icon-large{height:26px; width:26px; margin-right:10px}
   </style>
 </head>
 <body>
@@ -98,7 +101,7 @@
         <a href="#features">Features</a>
         <a href="#logos">Team</a>
   <a href="#faq">FAQ</a>
-  <a href="contact.html" style="background:#7E90A0; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request A Demo</a>
+  <a href="contact.html" style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request Access</a>
       </nav>
     </div>
   </header>
@@ -108,57 +111,102 @@
       <div>
         <div class="kicker">AI for Systems Engineers</div>
         <h1>The co-pilot every systems engineer needs</h1>
-        <p class="lede">Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — faster and more consistently. Try it for free.</p>
+        <p class="lede">Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — faster and more consistently.<br><br>Try it for free.</p>
         <div class="primary-actions">
-            <a href="contact.html" style="background:#7E90A0; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request A Demo</a>
+            <a href="contact.html" style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request Access</a>
             <!-- <a class="btn alt" href="#features">See how it works</a> -->
         </div>
       </div>
       <aside class="hero-card">
-        <h3 style="margin-top:0">What Castora does</h3>
-        <div class="stat"><span class="dot"></span><div><strong>Draft, check, and refine requirements</strong><br/><span class="muted">Evaluate subsystem reuse, refine existing requirements, and develop new requirements - fast</span></div></div>
-        <div class="stat"><span class="dot"></span><div><strong>Integrates with your workflow</strong><br/><span class="muted">Ingests DOORS, Jama, docs and more. Outputs structured, testable requirements.</span></div></div>
-        <div class="stat"><span class="dot"></span><div><strong>Speeds up teams</strong><br/><span class="muted">Ship requirements in weeks, not months or years.</span></div></div>
+    <h3 style="margin-top:0"><i data-feather="layers" class="icon-large" aria-hidden="true"></i>What Castora does</h3>
+        <div class="stat"><div><i data-feather="file-text" aria-hidden="true"></i><strong>Draft, check, and refine requirements</strong><br/><span class="muted">Evaluate subsystem reuse, refine existing requirements, and develop new requirements - fast.</span></div></div>
+        <div class="stat"><div><i data-feather="link" aria-hidden="true"></i><strong>Integrates with your existing tools</strong><br/><span class="muted">Ingests DOORS, Jama, docs and more. Outputs structured, testable requirements.</span></div></div>
+        <div class="stat"><div><i data-feather="clock" aria-hidden="true"></i><strong>Accelerates Timelines</strong><br/><span class="muted">Ship requirements in weeks, not months or years.</span></div></div>
       </aside>
     </section>
-    <!-- Screenshot section -->
-    <section class="container" style="padding:0 0 48px 0; text-align:center">
-      <iframe src="https://drive.google.com/file/d/1j85ybc9daycEmFxqcuX1JYsQpDmx4EiO/preview" width="800" height="450" allow="autoplay" style="max-width:100%; border-radius:16px; box-shadow:0 8px 32px rgba(54,60,76,.13); margin:0 auto; border:none;"></iframe>
-    </section>
-    <!-- Company logo carousel -->
-    <section id="logos" class="container" style="padding:0 0 48px 0; text-align:center">
-      <div class="muted" style="margin-top:12px; font-size:2rem; color:var(--muted); font-weight:600; margin-bottom:18px;">Built by systems and product leaders from</div>
-      <div style="display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap;">
-        <img src="Google_2015_logo.svg.webp" alt="Google" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
-        <img src="Cruise_logo.svg.png" alt="Cruise" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
-        <img src="TexasInstruments-Logo.svg.png" alt="TI" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
-        <img src="images.png" alt="GM" style="height:48px; max-width:180px; width:auto; object-fit:contain; opacity:.9; background:white; border-radius:8px; padding:4px 12px;" />
+
+    <section id="supercharge" class="container" style="padding:48px 0">
+      <h2 class="section-title">Supercharge Your System Documentation</h2>
+      <p class="muted" style="max-width:880px; margin-top:8px; margin-bottom:20px">
+        No more design documentation debt. Castora accelerates engineering decisions by combining structured requirement generation, automated checks for logical consistency,
+        and pragmatic reuse guidance — so teams spend less time developing and reworking specs, and more time delivering high quality, verifiable designs.
+      </p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <span class="tag" style="background:#b69f56; color:#3a2b2b"> <i data-feather="edit" aria-hidden="true"></i>Write & Verify</span>
+          <h4>Draft requirements that are testable</h4>
+          <p><i data-feather="check" aria-hidden="true"></i> Generate clear, atomic requirements with unique IDs and machine-checkable assertions so every clause can be verified automatically.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag" style="background:#b69f56; color:#3a2b2b"> <i data-feather="repeat" aria-hidden="true"></i>Reuse & Recommend</span>
+          <h4>Fast subsystem reuse analysis</h4>
+          <p><i data-feather="search" aria-hidden="true"></i> Ingest existing designs and get ranked recommendations for reuse, integration risks, and required adaptations — saving design cycles.</p>
+        </div>
+
+        <div class="card">
+          <span class="tag" style="background:#b69f56; color:#3a2b2b"> <i data-feather="download" aria-hidden="true"></i>Trace & Export</span>
+          <h4>Traceability from intent to verification</h4>
+          <p><i data-feather="link" aria-hidden="true"></i> Maintain trace links, generate test artifacts, and export to common formats so stakeholders can validate tradeoffs and approve baselines with confidence.</p>
+        </div>
       </div>
 
     </section>
 
     <section id="features">
       <div class="container">
-        <h2 class="section-title">Features</h2>
+        <h2 class="section-title">Castora Workflows</h2>
         <div class="grid">
           <div class="card">
-            <span class="tag">Subsystem Reuse</span>
+            <span class="tag" style="background:#6d4459; color:#fff; font-weight:500;"><i data-feather="repeat" aria-hidden="true"></i>Subsystem Reuse</span>
             <h4>Analyze Subsystem Reuse</h4>
-            <p>Get recommendations and alternatives on how to reuse a given subsystem in a new system.</p>
+            <p><i data-feather="eye" aria-hidden="true"></i> Get recommendations and alternatives on how to reuse a given subsystem in a new system.</p>
           </div>
           <div class="card">
-            <span class="tag">Refine</span>
+            <span class="tag" style="background:#6d4459; color:#fff; font-weight:500;"><i data-feather="tool" aria-hidden="true"></i>Refine</span>
             <h4>Refine existing requirements</h4>
-            <p>See a report outlining how your requirements need to change to be axiomatic and logically consistent.</p>
+            <p><i data-feather="file-text" aria-hidden="true"></i> See a report outlining how your requirements need to change to be axiomatic and logically consistent.</p>
           </div>
           <div class="card">
-            <span class="tag">Build</span>
+            <span class="tag" style="background:#6d4459; color:#fff; font-weight:500;"><i data-feather="package" aria-hidden="true"></i>Build</span>
             <h4>Build new system</h4>
-            <p>Generate requirements for a new or next-gen system based on your documentation and guidance.</p>
+            <p><i data-feather="zap" aria-hidden="true"></i> Generate requirements for a new or next-gen system based on your documentation and guidance.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Screenshot section -->
+    <section class="container" style="padding:0 0 48px 0; text-align:center">
+      <h3 class="section-title" style="margin-bottom:8px">Subsystem Reuse Analysis Workflow</h3>
+      <p class="muted" style="margin-top:0; margin-bottom:18px; max-width:880px; margin-inline:auto">
+        See how Castora analyzes and generates a report on the feasibility of reusing an existing subsystem or component.
+      </p>
+      <div style="max-width:800px; margin-inline:auto;">
+        <iframe
+          src="https://drive.google.com/file/d/1j85ybc9daycEmFxqcuX1JYsQpDmx4EiO/preview"
+          width="800" height="450" allow="autoplay"
+          title="Demonstration of the Subsystem Reuse Analysis Workflow"
+          style="max-width:100%; border-radius:16px; box-shadow:0 8px 32px rgba(54,60,76,.13); margin:0 auto; border:none;">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Company logo carousel -->
+    <section id="logos" class="container" style="padding:0 0 48px 0; text-align:center">
+      <div class="muted" style="margin-top:12px; font-size:1.1rem; font-weight:600; margin-bottom:18px">Built by Systems Engineering & Product Leaders from:</div>
+      <div style="display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap;">
+        <img src="Google_2015_logo.webp" alt="Google" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+        <img src="Cruise_logo.png" alt="Cruise" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+        <img src="TexasInstruments-Logo.png" alt="TI" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+        <img src="GM_Logo.png" alt="GM" style="height:48px; max-width:180px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+      </div>
+    </section>
+
+    </section>
+
+    
     <!-- <section id="pricing" class="container" style="text-align:center; padding:64px 0 32px 0">
       <h2 class="section-title">Become a 10x systems engineer</h2>
       <div class="muted" style="font-size:1.2rem; margin-bottom:18px">For just <strong>$10 / month</strong></div>
@@ -181,10 +229,10 @@
           <div>Castora has been created to be consistently reliable when generating and evaluating requirements, even when the context window & amount of information gets extremely large. It is less likely to omit certain details, reducing your risk of creating logically inconsistent requirements due to “forgetting” details, because it leverages multiple models and coordinates between them. Try it out and compare - we think you will like what you see!</div>
         </details>
         <details style="margin-bottom:18px"><summary><strong>Why shouldn’t I just create my own version of this?</strong></summary>
-          <div>You could create a GPT or Gem, but then you’d have to build it. We already did the hard work! Training it on systems engineering logic, standards, and verification methods, building custom workflows to ingest/export DOORS, Jama, etc., and spend time validating its reliability and accuracy. Speed up your workflows today, with Castora!</div>
+          <div>You could create a set of GPTs or Gems which orchestrate multiple workflows and data, but then you’d have to build it. We already did the hard work! Training it on systems engineering logic, standards, and verification methods, building custom workflows to ingest/export DOORS, Jama, etc., and spend time validating its reliability and accuracy. Speed up your workflows today, with Castora!</div>
         </details>
         <details style="margin-bottom:18px"><summary><strong>Who is the team behind Castora?</strong></summary>
-          <div>Castora was created by Kurt VonEhr & Kayiita Johansson. Kurt is an experienced systems engineering lead who’s shipped vehicles, autonomous vehicles, and robotics. Kayiita Johansson is a product leader who’s shipped smart thermostats, health devices, autonomous vehicles and gaming devices. We know firsthand the challenges systems engineers and their cross-functional teams face, and are excited to solve this for you!</div>
+          <div>Castora was created by Kurt VonEhr & Kayiita Johansson. Kurt is an experienced systems engineering leader who’s shipped high-volume specialized cellular products, autonomous vehicles, and robotics. Kayiita Johansson is a product leader who’s shipped smart thermostats, health devices, autonomous vehicles and gaming devices. We know firsthand the challenges systems engineers and their cross-functional teams face, and are excited to solve this for you!</div>
         </details>
         <details style="margin-bottom:18px"><summary><strong>Can this be used by teams? Do you have an enterprise plan?</strong></summary>
           <div>Castora is great for teams, and we'd love to talk to you about a plan. Email us at <a href="mailto:kurt@castora.systems">kurt@castora.systems</a> to discuss what you need!</div>
@@ -270,6 +318,11 @@
         if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
       })
     })
+    // Initialize Feather icons when DOM is ready (feather script loaded at end)
+    function initIcons(){ if(window.feather && typeof window.feather.replace === 'function'){ window.feather.replace(); } }
+    if(document.readyState==='complete' || document.readyState==='interactive'){ setTimeout(initIcons,10); } else { document.addEventListener('DOMContentLoaded', initIcons); }
   </script>
+  <!-- Feather icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" integrity="" crossorigin="anonymous"></script>
 </body>
 </html>
