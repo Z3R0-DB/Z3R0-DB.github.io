@@ -68,7 +68,7 @@
   </header>
   <div class="container">
     <div class="card">
-      <h1>Request A Demo</h1>
+  <h1 id="contact-heading">Request A Demo</h1>
       <form id="castora-contact" action="https://script.google.com/macros/s/AKfycbzi2Up1TGK944OziJ3_9gufUPcoL9G46nprP90Xu5WtOBUrajBLuZNswKjsAwsLJosu8g/exec" method="POST" style="display:grid; gap:20px;">
         <label style="font-weight:600; margin-bottom:4px;" for="name">Name <span style="color:var(--rose)">*</span></label>
         <input name="name" id="name" type="text" required style="padding:.85rem 1rem; border-radius:10px; border:1px solid color-mix(in oklab, var(--muted), white 60%); font-size:1rem;" placeholder="Your name" />
@@ -99,10 +99,12 @@
       }).then(() => {
         form.style.display = 'none';
         document.getElementById('thankyou').style.display = 'block';
+        document.getElementById('contact-heading').style.display = 'none';
       }).catch(() => {
         form.style.display = 'none';
-        document.getElementById('thankyou').innerHTML = "<h2>Something went wrong.</h2><p>Please try again later.</p>";
+        document.getElementById('thankyou').innerHTML = "<h2 style='color:#000'>Something went wrong.</h2><p>Please try again later.</p>";
         document.getElementById('thankyou').style.display = 'block';
+        document.getElementById('contact-heading').style.display = 'none';
       });
     });
   </script>
