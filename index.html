@@ -7,15 +7,15 @@
   <meta name="description" content="Castora: Systems Engineering made verifiable, consistent, and complete — today." />
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="castora_logo.png" />
-  <link rel="apple-touch-icon" href="castora_logo.png" />
+  <link rel="icon" type="image/png" href="assets/castora_logo.png" />
+  <link rel="apple-touch-icon" href="assets/castora_logo.png" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://castora.systems/" />
   <meta property="og:title" content="Castora — The co-pilot every systems engineer needs." />
   <meta property="og:description" content="Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — faster and more consistently. Try it for free." />
-  <meta property="og:image" content="https://castora.systems/social_beaver.png" />
+  <meta property="og:image" content="https://castora.systems/assets/social_beaver.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Castora Systems Logo" />
@@ -26,7 +26,7 @@
   <meta name="twitter:url" content="https://castora.systems/" />
   <meta name="twitter:title" content="Castora — The co-pilot every systems engineer needs." />
   <meta name="twitter:description" content="Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — faster and more consistently. Try it for free." />
-  <meta name="twitter:image" content="https://castora.systems/social_beaver.png" />
+  <meta name="twitter:image" content="https://castora.systems/assets/social_beaver.png" />
   <meta name="twitter:image:alt" content="Castora Systems Logo" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -181,6 +181,7 @@
       /* Footer */
       .footer-grid{grid-template-columns:1fr; gap:16px; text-align:center}
       .footer-grid .sm{justify-self:center !important}
+      .footer-grid .brand{justify-self:center; text-align:left}
       
       /* FAQ adjustments */
       #faq .container > div{max-width:100% !important; padding:0 8px}
@@ -211,7 +212,7 @@
   <header>
     <div class="container nav">
       <a class="brand" href="index.html" style="text-decoration:none">
-        <img src="castora_logo.png" alt="Castora logo" style="height:41.4px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
+        <img src="assets/castora_logo.png" alt="Castora logo" style="height:41.4px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
         <div class="wordmark" style="font-size:1.15em">Castora Systems</div>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
@@ -219,7 +220,7 @@
       </button>
       <nav class="nav-menu" id="navMenu">
         <a href="#features">Features</a>
-        <a href="#logos">Team</a>
+        <a href="#team">Team</a>
         <a href="#faq">FAQ</a>
         <a href="contact.html" style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Request Access</a>
       </nav>
@@ -312,20 +313,48 @@
       </div>
     </section>
 
-    <!-- Company logo carousel -->
-    <section id="logos" class="container" style="padding:0 0 48px 0; text-align:center">
-      <div class="muted" style="margin-top:12px; font-size:1.1rem; font-weight:600; margin-bottom:18px">Castora is built by Product & Engineering Leaders from:</div>
-      <div style="display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap;">
-        <img src="Google_2015_logo.webp" alt="Google" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
-        <img src="Cruise_logo.png" alt="Cruise" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
-        <img src="TexasInstruments-Logo.png" alt="TI" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
-        <img src="GM_Logo.png" alt="GM" style="height:48px; max-width:180px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+    <!-- Team section -->
+    <section id="team" class="container" style="padding:48px 0">
+      <h2 class="section-title">Team</h2>
+      <div style="margin-top:14px">The Castora Team has worked in many world class engineering environments and knows the challenges systems engineers face when working cross-functionally. This tool is designed for all engineers who develop, review, manage, and implement Systems Requirements.</div>
+      <div class="grid" style="grid-template-columns:repeat(1,1fr); gap:18px; margin-top:18px">
+      <a href="https://www.linkedin.com/in/kvonehr/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+        <div class="card" role="button" aria-label="Kurt VonEhr LinkedIn profile" style="cursor:pointer;">
+          <div style="display:flex; gap:14px; align-items:center;">
+            <img src="assets/kurt_profile.jpg" alt="Kurt VonEhr" loading="lazy" style="height:72px; width:72px; border-radius:50%; object-fit:cover; border:2px solid rgba(0,0,0,0.06); box-shadow:var(--shadow)" />
+            <div>
+              <h4 style="margin:0">Kurt VonEhr</h4>
+              <p class="muted" style="margin:6px 0 0">Experienced systems engineering leader who’s shipped millions of high performance cellular products, autonomous vehicles, and robotics.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/kayiitajohansson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+        <div class="card" role="button" aria-label="Kayiita Johansson LinkedIn profile" style="cursor:pointer;">
+          <div style="display:flex; gap:14px; align-items:center;">
+            <img src="assets/kayiita_profile.jpg" alt="Kayiita Johansson" loading="lazy" style="height:72px; width:72px; border-radius:50%; object-fit:cover; border:2px solid rgba(0,0,0,0.06); box-shadow:var(--shadow)" />
+            <div>
+              <h4 style="margin:0">Kayiita Johansson</h4>
+              <p class="muted" style="margin:6px 0 0">Product Design leader who’s shipped thousands of smart thermostats, health devices, autonomous vehicles and gaming devices.</p>
+            </div>
+          </div>
+        </div>
+      </a>
       </div>
     </section>
 
+      <!-- Company logo carousel -->
+    <section id="logos" class="container" style="padding:0 0 48px 0; text-align:center">
+      <div class="muted" style="margin-top:12px; font-size:1.1rem; font-weight:600; margin-bottom:18px">Our Experience</div>
+      <div style="display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap;">
+        <img src="assets/Google_2015_logo.webp" alt="Google" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+        <img src="assets/Cruise_logo.png" alt="Cruise" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+        <img src="assets/TexasInstruments-Logo.png" alt="TI" style="height:48px; max-width:140px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+        <img src="assets/GM_Logo.png" alt="GM" style="height:48px; max-width:180px; width:auto; object-fit:contain; opacity:.9; background:transparent; border-radius:8px; padding:4px 12px;" />
+      </div>
     </section>
-
-    
+        
+  
     <!-- <section id="pricing" class="container" style="text-align:center; padding:64px 0 32px 0">
       <h2 class="section-title">Become a 10x systems engineer</h2>
       <div class="muted" style="font-size:1.2rem; margin-bottom:18px">For just <strong>$10 / month</strong></div>
@@ -345,16 +374,13 @@
           <div>You can find our privacy policy and terms of service <a href="#" id="privacy-link">here</a>.</div>
         </details> -->
         <details style="margin-bottom:18px"><summary><strong>Why is Castora better than ChatGPT or Gemini for Systems Engineers?</strong></summary>
-          <div>Castora has been created to be consistently reliable when generating and evaluating requirements, even when the context window & amount of information gets extremely large. It is less likely to omit certain details, reducing your risk of creating logically inconsistent requirements due to “forgetting” details, because it leverages multiple models and coordinates between them. We eliminate the friction of copy-pasting bits of information between your preferred LLMs and Requirements Management Tools, and the subsequent hallucinations or alterations which occur between queries. Try it out and compare - we think you will like what you see!</div>
+          <div>Castora is designed to be consistently reliable when generating and evaluating requirements, even when the context window & amount of information gets extremely large. It is less likely to omit certain details, reducing your risk of creating logically inconsistent requirements due to “forgetting” details, because it leverages multiple models and coordinates between them. <br /><br /> Many systems engineers are already working with LLMs to develop their requirements. This has several issues: it requires a manual feedback loop of copy-pasting, the LLM is missing detailed context about the broader system, LLMs overwriting requirements which were previously accepted, hallucinations and redundancies, unstructured responses, just to name a few. We eliminate the friction between your preferred LLMs and Requirements Management Tools. <br /><br /> We are excited to enable high quality engineering practices for every design, while simulataneously accelerating development processes. <br /><br />Try it out and compare - we think you will like what you see!</div>
         </details>
         <details style="margin-bottom:18px"><summary><strong>Why shouldn’t I just create my own version of this?</strong></summary>
           <div>You could theoretically create a set of GPTs or Gems which orchestrate multiple workflows and data, but existing LLM frameworks do not easily allow customization and integration between GPTs. We already did the hard work! Training it on systems engineering logic, standards, and verification methods, building custom workflows to ingest/export DOORS, Jama, etc., validating its reliability and accuracy. Speed up your workflows with Castora, today!</div>
         </details>
-        <details style="margin-bottom:18px"><summary><strong>Who is the team behind Castora?</strong></summary>
-          <div>Castora was created by Kurt VonEhr & Kayiita Johansson. Kurt is an experienced systems engineering leader who’s shipped high-volume performance cellular products, autonomous vehicles, and robotics. Kayiita Johansson is a product leader who’s shipped smart thermostats, health devices, autonomous vehicles and gaming devices. We know firsthand the challenges systems engineers and their cross-functional teams face, and are excited to solve this for you!</div>
-        </details>
         <details style="margin-bottom:18px"><summary><strong>Can this be used by teams? Do you have an enterprise plan?</strong></summary>
-          <div>Castora is great for teams, and we'd love to talk to you about a plan. Email us at <a href="mailto:teams@castora.systems">team@castora.systems</a> to discuss what you need!</div>
+          <div>Castora is great for teams, and we'd love to talk to you about a plan. Email us at <a href="mailto:teams@castora.systems">teams@castora.systems</a> to discuss what you need!</div>
         </details>
       </div>
     </section>
@@ -410,7 +436,7 @@
   <footer>
     <div class="container footer-grid">
       <div class="brand">
-        <img src="castora_logo.png" alt="Castora logo" />
+        <img src="assets/castora_logo.png" alt="Castora logo" />
         <div>
           <div class="wordmark" style="font-size:1.1rem">Castora Systems</div>
           <div class="sm muted">The co-pilot every systems engineer needs.</div>
@@ -418,7 +444,7 @@
       </div>
       <div class="sm" style="justify-self:end">
         <a href="#features" class="muted" style="margin-right:12px">Features</a>
-        <a href="#logos" class="muted" style="margin-right:12px">Team</a>
+        <a href="#team" class="muted" style="margin-right:12px">Team</a>
         <a href="#faq" class="muted" style="margin-right:12px">FAQ</a>
         <!-- <a href="contact.html" class="muted" style="margin-right:12px">Contact</a>
         <a href="#" class="muted" style="margin-right:12px">Privacy</a>
