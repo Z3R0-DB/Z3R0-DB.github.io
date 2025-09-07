@@ -3,32 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Castora — AI for systems engineering</title>
+  <title>Features — Castora</title>
   <meta name="description" content="Castora: Systems Engineering made verifiable, consistent, and complete — today." />
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/castora_logo.png" />
   <link rel="apple-touch-icon" href="assets/castora_logo.png" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://castora.systems/" />
-  <meta property="og:title" content="Castora — The co-pilot every systems engineer needs." />
-  <meta property="og:description" content="Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — efficiently and effectively. Try it for free." />
-  <meta property="og:image" content="https://castora.systems/assets/social_beaver.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Castora Systems Logo" />
-  <meta property="og:site_name" content="Castora Systems" />
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://castora.systems/" />
-  <meta name="twitter:title" content="Castora — The co-pilot every systems engineer needs." />
-  <meta name="twitter:description" content="Castora helps systems engineers reuse what works, refine what doesn't, and build what's next — efficiently and effectively. Try it for free." />
-  <meta name="twitter:image" content="https://castora.systems/assets/social_beaver.png" />
-  <meta name="twitter:image:alt" content="Castora Systems Logo" />
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
@@ -65,7 +43,7 @@
     .nav a.cta:hover{transform:translateY(-1px)}
 
     /* Hero */
-    .hero{display:grid; align-items:center; grid-template-columns: 1.1fr .9fr; gap:0px; padding-bottom: 20px; padding-top:100px 0}
+    .hero{display:grid; align-items:center; grid-template-columns: 1.1fr .9fr; gap:48px; padding:72px 0}
     .kicker{font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
     h1{font-family: Unbounded, Inter, sans-serif; font-size: clamp(2.2rem, 2.4vw + 1.8rem, 3.5rem); line-height:1.12; margin:.35rem 0 1rem}
     .lede{font-size:1.15rem; color: color-mix(in oklab, var(--ink), var(--muted) 40%)}
@@ -205,136 +183,114 @@
       #logos img{height:36px !important; max-width:120px !important}
     }
   </style>
-  <!-- Shared styles to keep header/nav consistent across pages -->
-  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
     <div class="container nav">
       <a class="brand" href="index.html" style="text-decoration:none">
-        <img src="assets/castora_logo.png" alt="Castora logo" style="height:41.4px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
-        <div class="wordmark" style="font-size:1.15em">Castora Systems</div>
+        <img src="assets/castora_logo.png" alt="Castora logo" style="height:36px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
+        <div class="wordmark">Castora Systems</div>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
-        <i data-feather="menu" aria-hidden="true"></i>
-      </button>
       <nav class="nav-menu" id="navMenu">
-  <a href="features.html">Features</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="team.html">Team</a>
-  <a href="faqs.html">FAQs</a>
-  <a href="contact.html" style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Get started for free</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="team.html">Team</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html" style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Get started for free</a>
       </nav>
     </div>
   </header>
-
-  <main>
-    <section class="container hero">
-      <div>
-        <div class="kicker">AI for Systems Engineering</div>
-        <h1>The co-pilot every systems engineer needs</h1>
-        <p class="lede">Castora helps engineers reuse what works, refine what doesn't, and build what's next — efficiently and effectively.</p>
-        <form class="primary-actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1.5rem; width:120%" onsubmit="event.preventDefault(); window.location.href='contact.html';">
-          <input
-            type="email"
-            required
-            placeholder="Enter your email"
-            style="padding:.63rem 1rem; border-radius:12px; border:1.5px solid #d1d5db; font-size:.98em; min-width:220px; outline:none;"
-          />
-          <button
-            type="submit"
-            class="btn"
-            style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem 1.2rem; font-size:.875em; box-shadow:var(--shadow); border:none; cursor:pointer;"
-          >
-            Get started for free
-          </button>
-        </form>
+  <main class="container">
+    <section id="supercharge" style="padding:48px 0">
+      <h2 class="section-title">Supercharge Your System Documentation</h2>
+      <p class="muted" style="max-width:880px; margin-top:8px; margin-bottom:20px">
+        No more excuses for design documentation debt. Castora accelerates engineering decisions by combining structured requirement generation, automated checks for logical consistency,
+        and pragmatic reuse guidance — so teams spend less time developing and reworking specs, and more time delivering high quality, verifiable designs.
+      </p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <span class="tag" style="background:#b69f56; color:#3a2b2b"> <i data-feather="edit" aria-hidden="true"></i>Write & Verify</span>
+          <h4>Draft requirements that are testable</h4>
+          <p><i data-feather="check" aria-hidden="true"></i> Generate clear, atomic requirements with unique IDs and machine-checkable assertions so every clause can be verified automatically.</p>
+        </div>
+        <div class="card">
+          <span class="tag" style="background:#b69f56; color:#3a2b2b"> <i data-feather="repeat" aria-hidden="true"></i>Reuse & Recommend</span>
+          <h4>Fast subsystem reuse analysis</h4>
+          <p><i data-feather="search" aria-hidden="true"></i> Ingest existing designs and get ranked recommendations for reuse, integration risks, and required adaptations — saving design cycles.</p>
+        </div>
+        <div class="card">
+          <span class="tag" style="background:#b69f56; color:#3a2b2b"> <i data-feather="download" aria-hidden="true"></i>Trace & Export</span>
+          <h4>Traceability from intent to verification</h4>
+          <p><i data-feather="link" aria-hidden="true"></i> Maintain trace links, generate test artifacts, and export to common formats so stakeholders can validate tradeoffs and approve baselines with confidence.</p>
+        </div>
       </div>
-      <aside style="background:transparent; box-shadow:none; padding:0; display:flex; justify-content:center; align-items:center;">
-        <img src="assets/Updated product example.png" alt="Castora product screenshot" style="width:100%; max-width:1200px; border-radius:16px; box-shadow:none; display:block;">
-      </aside>
     </section>
-    <section class="container" style="margin-top:3px;">
-      <!-- 3 modules/cards in a grid -->
-       <div class="kicker">Key features</div>
-      <div class="grid" style="margin-top:10;">
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/placeholder.png" alt="" style="width:100%; height:100%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Reuse Analysis</h3>
-          <p style="color:var(--muted); margin:0;">Get clear guidance on reusability of a subsystem or component fast, by inputting existing documentation and other relevant information.</p>
+    <section id="workflows">
+      <h2 class="section-title">Castora Workflows</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="tag" style="background:#6d4459; color:#fff; font-weight:500;"><i data-feather="package" aria-hidden="true"></i>Build</span>
+          <h4>Build new system</h4>
+          <p><i data-feather="zap" aria-hidden="true"></i> Generate complete requirements for a new or next-gen system based on your documentation and guidance.</p>
         </div>
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/placeholder.png" alt="" style="width:100%; height:100%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Requirements Check</h3>
-          <p style="color:var(--muted); margin:0;">Instantly reviews your system requirements for completeness, consistency, and clarity so you can prevent costly rework before it starts.</p>
+        <div class="card">
+          <span class="tag" style="background:#6d4459; color:#fff; font-weight:500;"><i data-feather="tool" aria-hidden="true"></i>Refine</span>
+          <h4>Refine existing requirements</h4>
+          <p><i data-feather="file-text" aria-hidden="true"></i> See a report outlining how your requirements should (shall, and may) change to be axiomatic, logically consistent, syntactically correct, and adhere to INCOSE best practices. Castora can then regenerate your requirements based on your feedback and alignment, and provide a summary of all changes implemented.</p>
         </div>
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/placeholder.png" alt="" style="width:100%; height:100%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Generate Requirements</h3>
-          <p style="color:var(--muted); margin:0;">Generates clear, verifiable requirements for your next-generation or brand new systems fast, leveraging any documentation inputted.</p>
+        <div class="card">
+          <span class="tag" style="background:#6d4459; color:#fff; font-weight:500;"><i data-feather="repeat" aria-hidden="true"></i>Reuse</span>
+          <h4>Reuse Subsystem Analysis</h4>
+          <p><i data-feather="eye" aria-hidden="true"></i> Get recommendations and alternatives on how to reuse an existing subsystem or component in a new system.</p>
         </div>
-  </div>
-  <!-- Wide box above the modules -->
-    <div class="kicker" style="margin-top:40px;">Enabled by</div>
-    <div class="feature-intro" style="background:white; border:1px solid color-mix(in oklab, var(--muted), white 60%); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px 36px 24px 36px; margin-bottom:32px; margin-top:32px">
-        <ul style="font-size:1.13rem; color:var(--muted); margin:0 0 0 1.2em; padding:0; line-height:1.7;">
-          <li><b>Expanded, reliable memory:</b> LLM orchestration ensures Castora remembers all information you input.</li>
-          <li><b>Security-first approach to data management and processing:</b> speed up your workflows with confidence.</li>
-          <li><b>Compatible with your existing systems:</b> takes exports from DOORS, JAMA, JIRA and other requirements management tools.</li>
-        </ul>
-    </div>
-</section>
+      </div>
+    </section>
+    <section id="demo" style="padding:0 0 48px 0; text-align:center">
+      <h3 class="section-title" style="margin-bottom:8px">Demo: Reuse Subsystem Analysis</h3>
+      <p class="muted" style="margin-top:0; margin-bottom:18px; max-width:880px; margin-inline:auto">
+        See how Castora analyzes and generates a report on the feasibility of reusing an existing subsystem or component.
+      </p>
+      <div class="video-container">
+        <iframe
+          src="https://drive.google.com/file/d/1j85ybc9daycEmFxqcuX1JYsQpDmx4EiO/preview"
+          width="800" height="450" allow="autoplay"
+          title="Demonstration of the Reuse Analysis Workflow">
+        </iframe>
+      </div>
+    </section>
   </main>
-
   <footer>
     <div class="container footer-grid">
       <div class="brand">
         <img src="assets/castora_logo.png" alt="Castora logo" />
         <div>
-          <div class="wordmark" style="font-size:1.5rem">Castora Systems</div>
+          <div class="wordmark" style="font-size:1.15rem">Castora Systems</div>
           <div class="sm muted">The co-pilot every systems engineer needs.</div>
         </div>
       </div>
       <div class="sm" style="justify-self:end">
-        <a href="#features" class="muted" style="margin-right:12px">Features</a>
-        <a href="#team" class="muted" style="margin-right:12px">Team</a>
-        <a href="#faq" class="muted" style="margin-right:12px">FAQ</a>
-        <!-- <a href="contact.html" class="muted" style="margin-right:12px">Contact</a>
-        <a href="#" class="muted" style="margin-right:12px">Privacy</a>
-        <a href="#" class="muted" style="margin-right:12px">Terms</a> -->
+        <a href="features.html" class="muted" style="margin-right:12px">Features</a>
+        <a href="team.html" class="muted" style="margin-right:12px">Team</a>
+        <a href="faqs.html" class="muted" style="margin-right:12px">FAQ</a>
         <span class="muted">© <span id="year"></span> Castora</span>
       </div>
     </div>
   </footer>
-
   <script>
-    // set current year, smooth scroll
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href');
-        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
-      })
-    })
-    // Initialize Feather icons when DOM is ready (feather script loaded at end)
-    function initIcons(){ if(window.feather && typeof window.feather.replace === 'function'){ window.feather.replace(); } }
-    if(document.readyState==='complete' || document.readyState==='interactive'){ setTimeout(initIcons,10); } else { document.addEventListener('DOMContentLoaded', initIcons); }
-    
-    // Mobile navigation toggle
     function toggleNav() {
       const navMenu = document.getElementById('navMenu');
       navMenu.classList.toggle('active');
     }
-    
-    // Close mobile nav when clicking on links
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('navMenu').classList.remove('active');
       });
     });
+    function initIcons(){ if(window.feather && typeof window.feather.replace === 'function'){ window.feather.replace(); } }
+    if(document.readyState==='complete' || document.readyState==='interactive'){ setTimeout(initIcons,10); } else { document.addEventListener('DOMContentLoaded', initIcons); }
   </script>
   <script src="/header_test.js"></script>
-  <!-- Feather icons CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </body>
 </html>
