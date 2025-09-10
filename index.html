@@ -191,15 +191,59 @@
     }
 
     @media (max-width: 480px){
-      .container{width:min(100%, 92%)}
+      .container{width: 80%; padding-left: 8px; padding-right: 8px;}
       .hero{padding:32px 0; gap:24px}
       .hero-card{padding:20px}
-      .card{padding:16px}
-      h1{font-size:clamp(1.6rem, 6vw + 0.8rem, 2.4rem)}
-      .lede{font-size:1rem; line-height:1.5}
-      .primary-actions{flex-direction:column; gap:8px}
-      .btn{padding:.75rem 1rem; text-align:center}
-      section{padding:32px 0}
+      .card{align-items: center !important; width: 100%; box-sizing: border-box; margin-left: 0; margin-right: 0; padding:12px}
+      .nav-menu { gap:12px;}
+      .nav-menu a {font-size: 3.3rem;}
+
+      body {
+        overflow-x: hidden;
+      }
+      body, 
+      body * {
+        text-align: center !important;
+      }
+      ul, 
+      ul li, 
+      .card ul, 
+      .card ul li {
+        text-align: left !important;
+      }
+       h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+      }
+      .lede {
+        font-size: 1rem;
+      }
+      .feature-intro ul {
+        font-size: 1rem;
+      }
+      .primary-actions {
+          flex-direction: column;
+          gap: 8px;
+        }
+      .footer-grid .sm a {
+        margin-right: 18px !important;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
+        .primary-actions input,
+        .primary-actions button {
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+          min-width: 0;
+          box-sizing:border-box;
+        }
+        .kicker {text-align: center;}
+        .primary-actions input {
+          margin-bottom: 4px;
+        }      
+      .btn{padding:.75rem 1rem; text-align:center; margin-bottom:8px;}
+      section{padding:20px 0}
       
       /* Make company logos smaller on very small screens */
       #logos img{height:36px !important; max-width:120px !important}
@@ -234,7 +278,7 @@
         <div class="kicker">AI for Systems Engineering</div>
         <h1>The co-pilot every systems engineer needs</h1>
         <p class="lede">Castora helps engineers reuse what works, refine what doesn't, and build what's next — efficiently and effectively.</p>
-        <form class="primary-actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1.5rem; width:120%" onsubmit="event.preventDefault(); window.location.href='contact.html';">
+        <form class="primary-actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1.5rem;" onsubmit="event.preventDefault(); window.location.href='contact.html';">
           <input
             type="email"
             required
@@ -259,17 +303,17 @@
        <div class="kicker">Key features</div>
       <div class="grid" style="margin-top:10;">
         <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/reuse_card.png" alt="" style="width:100%; height:100%; margin-bottom:12px;">
+          <img src="assets/reuse_card.png" alt="" style="width:80%; margin-bottom:12px;">
           <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Reuse Analysis</h3>
           <p style="color:var(--muted); margin:0;">Get clear guidance on reusability of a subsystem or component fast, by inputting existing documentation and other relevant information.</p>
         </div>
         <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/requirements_card.png" alt="" style="width:100%; height:100%; margin-bottom:12px;">
+          <img src="assets/requirements_card.png" alt="" style="width:80%; margin-bottom:12px;">
           <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Requirements Check</h3>
           <p style="color:var(--muted); margin:0;">Instantly reviews your system requirements for completeness, consistency, and clarity so you can prevent costly rework before it starts.</p>
         </div>
         <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/generate_card.png" alt="" style="width:100%; height:100%; margin-bottom:12px;">
+          <img src="assets/generate_card.png" alt="" style="width:80%; margin-bottom:12px;">
           <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Generate Requirements</h3>
           <p style="color:var(--muted); margin:0;">Generates clear, verifiable requirements for your next-generation or brand new systems fast, leveraging any documentation inputted.</p>
         </div>
