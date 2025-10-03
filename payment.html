@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment — Castora</title>
+  <meta name="description" content="Castora: Systems Engineering made verifiable, consistent, and complete — today." />
+  <link rel="icon" type="image/png" href="assets/castora_logo.png" />
+  <link rel="apple-touch-icon" href="assets/castora_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #E9E6E8;  /* light */
+      --ink: #363C4C; /* slate */
+      --accent: #B69F56; /* gold */
+      --muted: #7E90A0; /* blue-gray */
+      --rose: #855A70; /* rose */
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(54,60,76,.15);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+    }
+    a{color:var(--ink); text-decoration:none}
+    .container{width:min(1120px, 92%); margin-inline:auto}
+    /* Nav */
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px);
+      background: color-mix(in oklab, var(--bg), white 40% / 70%);
+      border-bottom:1px solid color-mix(in oklab, var(--muted), white 75%);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:12px; align-items:center}
+    .brand img{height:41.4px; width:auto; filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))}
+    .brand .wordmark{font-family: Unbounded, Inter, sans-serif; font-weight:700; letter-spacing:.2px}
+    .nav a.cta{padding:.65rem 1rem; border-radius:999px; background:var(--accent); color:#111; font-weight:600; box-shadow:var(--shadow)}
+    .nav a.cta:hover{transform:translateY(-1px)}
+
+    /* Hero */
+    .hero{display:grid; align-items:center; grid-template-columns: 1.1fr .9fr; gap:0px; padding-bottom: 20px; padding-top:100px 0}
+    .kicker{font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+    h1{font-family: Unbounded, Inter, sans-serif; font-size: clamp(2.2rem, 2.4vw + 1.8rem, 3.5rem); line-height:1.12; margin:.35rem 0 1rem}
+    .lede{font-size:1.15rem; color: color-mix(in oklab, var(--ink), var(--muted) 40%)}
+    .pills{display:flex; flex-wrap:wrap; gap:.6rem; margin:1.25rem 0 2rem}
+    .pill{border:1px solid color-mix(in oklab, var(--muted), white 65%); padding:.5rem .75rem; border-radius:999px; font-weight:600; background:white; color:var(--ink)}
+    .primary-actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{padding:.9rem 1.1rem; border-radius:12px; font-weight:700; border:1.5px solid transparent; transition:.2s ease; box-shadow:var(--shadow)}
+    .btn.primary{background:var(--ink); color:white}
+    .btn.primary:hover{transform:translateY(-2px)}
+    .btn.alt{background:white; border-color: color-mix(in oklab, var(--muted), white 60%)}
+    .btn.alt:hover{border-color: var(--ink)}
+    .hero-card{background:linear-gradient(135deg, color-mix(in oklab, var(--rose), white 70%), white 85%); border:1px solid color-mix(in oklab, var(--muted), white 70%); border-radius: var(--radius); padding:28px; box-shadow:var(--shadow)}
+    .hero-card h3{margin:0 0 .5rem}
+    .stat{display:flex; align-items:center; gap:14px; padding:12px 0}
+    .stat .dot{height:10px; width:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px color-mix(in oklab, var(--accent), white 70%)}
+
+    /* Value grid */
+    section{padding:80px 0}
+    .section-title{font-family: Unbounded, Inter, sans-serif; font-size:clamp(1.6rem, 1.1vw + 1.2rem, 2.2rem)}
+    .muted{color: var(--muted)}
+    .grid{display:grid; gap:18px; grid-template-columns: repeat(3, 1fr); margin-top:28px}
+    .card{background:white; border:1px solid color-mix(in oklab, var(--muted), white 60%); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .card h4{margin:0 0 .4rem}
+    .tag{display:inline-block; font-size:.78rem; font-weight:700; color:#111; background:var(--accent); padding:.35rem .55rem; border-radius:7px; margin-bottom:.7rem}
+
+    /* Timeline */
+    .timeline{position:relative; margin-top:36px}
+    .rail{position:absolute; left:12px; top:0; bottom:0; width:3px; background: color-mix(in oklab, var(--muted), white 40%)}
+    .step{display:grid; grid-template-columns: 40px 1fr; gap:16px; margin-bottom:26px}
+    .bullet{height:24px; width:24px; border-radius:50%; border:3px solid white; background:var(--rose); box-shadow:var(--shadow); margin-top:2px}
+    .step h5{margin:.2rem 0 .25rem}
+
+    /* Footer */
+    footer{padding:36px 0 60px; border-top:1px solid color-mix(in oklab, var(--muted), white 70%); background: linear-gradient(180deg, transparent, #fff)}
+    .footer-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center}
+    .sm{font-size:.95rem}
+
+    /* Icon styles (feather icons will replace elements with data-feather) */
+    svg.feather{height:20px; width:20px; vertical-align:middle; margin-right:8px; stroke:currentColor}
+    svg.feather.icon-large{height:26px; width:26px; margin-right:10px}
+
+    /* Mobile Navigation */
+    .nav-toggle{display:none; background:none; border:none; padding:8px; cursor:pointer; z-index:60}
+    .nav-menu{display:flex; gap:18px; align-items:center}
+    
+    /* Responsive iframe */
+    .video-container{position:relative; width:100%; height:0; padding-bottom:56.25%; /* 16:9 aspect ratio */}
+    .video-container iframe{position:absolute; top:0; left:0; width:100%; height:100%; border-radius:16px; box-shadow:0 8px 32px rgba(54,60,76,.13); border:none}
+
+    /* Responsive */
+    @media (max-width: 768px){
+      .container{width:min(100%, 95%)}
+      
+      /* Mobile nav - overlay style */
+      .nav{padding:12px 0}
+      .nav-toggle{display:block}
+      .nav-menu{
+        display:none; 
+        position:fixed; 
+        top:0; 
+        left:0; 
+        width:100%; 
+        height:100vh; 
+        background:rgba(233, 230, 232, 0.98); 
+        backdrop-filter:blur(10px);
+        flex-direction:column; 
+        justify-content:center; 
+        align-items:center;
+        gap:24px; 
+        z-index:55;
+        transition:opacity 0.3s ease, visibility 0.3s ease;
+        opacity:0;
+        visibility:hidden;
+      }
+      .nav-menu.active{
+        display:flex; 
+        opacity:1;
+        visibility:visible;
+      }
+      .nav-menu a{
+        padding:12px 24px; 
+        font-size:1.1rem; 
+        font-weight:500;
+        text-align:center;
+        border-radius:8px;
+        transition:background 0.2s ease;
+      }
+      .nav-menu a:hover{background:rgba(255,255,255,0.7)}
+      .nav-menu .btn{margin-top:16px; font-size:1rem}
+
+      /* Hero adjustments */
+      .hero{grid-template-columns:1fr; gap:32px; padding:40px 0}
+      .hero-card{margin-top:16px}
+      .lede{font-size:1.05rem}
+      h1{font-size:clamp(1.8rem, 5vw + 1rem, 2.8rem); line-height:1.2}
+      
+      /* Section spacing */
+      section{padding:48px 0}
+      .grid{grid-template-columns:1fr; gap:16px}
+      
+      /* Cards */
+      .card{padding:20px}
+      .stat{flex-direction:column; align-items:flex-start; gap:8px; padding:8px 0}
+      .stat .dot{display:none}
+      
+      /* Typography adjustments */
+      .section-title{font-size:clamp(1.4rem, 4vw + 1rem, 1.8rem); line-height:1.3}
+      
+      /* Logo section */
+      #logos div[style*="font-size:1.1rem"]{font-size:1rem !important}
+      #logos div[style*="gap:48px"]{gap:24px !important; padding:0 16px}
+      
+      /* Footer */
+      .footer-grid{grid-template-columns:1fr; gap:16px; text-align:center}
+      .footer-grid .sm{justify-self:center !important}
+      .footer-grid .brand{justify-self:center; text-align:left}
+      
+      /* FAQ adjustments */
+      #faq .container > div{max-width:100% !important; padding:0 8px}
+      details{padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%); border-radius:8px; background:white}
+      details summary{font-weight:600; cursor:pointer; padding:4px 0}
+      details[open] summary{margin-bottom:8px; border-bottom:1px solid color-mix(in oklab, var(--muted), white 80%)}
+    }
+
+    @media (max-width: 480px){
+      .container{width: 90%; padding-left: 8px; padding-right: 8px;}
+      .hero{padding:32px 0; gap:24px}
+      .hero-card{padding:20px}
+      .grid {grid-template-columns:1fr !important; gap:16px !important;}
+      .card{align-items: center !important; width: 100%; box-sizing: border-box; margin-left: 0; margin-right: 0; padding:12px !important;}
+      .nav-menu { gap:12px;}
+      .nav-menu a {font-size: 3.3rem;}
+      .card .btn,.card button {width: 100% !important; text-align:center;}
+      body {
+        overflow-x: hidden;
+      }
+      .card img {
+          /* max-height: 140px;
+          width: auto;
+          margin-left: auto;
+          margin-right: auto;
+          display: block; */
+        }
+       h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+      }
+      .lede {
+        font-size: 1rem;
+      }
+      .feature-intro ul {
+        font-size: 1rem;
+      }
+      .primary-actions {
+          flex-direction: column;
+          gap: 8px;
+        }
+      .footer-grid .sm a {
+        margin-right: 18px !important;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
+        .primary-actions input,
+        .primary-actions button {
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+          min-width: 0;
+          box-sizing:border-box;
+        }
+        .kicker {text-align: center;}
+        .primary-actions input {
+          margin-bottom: 4px;
+        }      
+      .btn{padding:.75rem 1rem; text-align:center; margin-bottom:8px;}
+      section{padding:20px 0}
+      
+      /* Make company logos smaller on very small screens */
+      #logos img{height:36px !important; max-width:120px !important}
+    }
+    /* === Payment page polish === */
+.pay-hero{padding:72px 0 36px}
+.pay-wrap{
+  display:grid; grid-template-columns: 1.05fr .95fr; gap:28px;
+  align-items:start;
+}
+.pay-intro{padding-right:12px}
+.pay-title{margin:.35rem 0 .6rem}
+
+.pay-cta{display:flex; align-items:center; gap:14px; margin:18px 0 6px}
+.pay-trust{display:flex; align-items:center; gap:10px; color:var(--muted); font-size:.95rem}
+.dot-ink{width:8px; height:8px; border-radius:50%; background:var(--ink); opacity:.25}
+
+.fineprint{margin-top:6px; font-size:.9rem; color:var(--muted)}
+
+.pay-card{
+  background:linear-gradient(135deg, #fff, color-mix(in oklab, var(--rose), white 86%));
+  border:1px solid color-mix(in oklab, var(--muted), white 70%);
+  border-radius:var(--radius);
+  padding:24px 22px;
+  box-shadow:var(--shadow);
+}
+.pay-card-title{margin:0 0 .6rem; font-weight:700}
+
+.steps{list-style:none; margin:8px 0 0; padding:0; display:flex; flex-direction:column; gap:14px}
+.steps li{
+  display:grid; grid-template-columns: 110px 1fr; align-items:start; gap:16px;
+  padding:10px 0; border-top:1px solid color-mix(in oklab, var(--muted), white 78%);
+}
+.steps li:first-child{border-top:none; padding-top:0}
+.step-label{
+  font-weight:700; color:var(--ink);
+}
+.step-copy{
+  color: color-mix(in oklab, var(--ink), var(--muted) 35%);
+}
+
+.pay-faq{padding:36px 0 72px}
+.faq-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:18px}
+.faq-grid .card{padding:18px}
+.faq-grid .card h4{margin:.1rem 0 .3rem}
+
+/* Tighten shadows and reduce “pill” noise sitewide */
+.pills{display:none} /* hide the extra badges on this page for a cleaner hero */
+
+/* Responsive adjustments */
+@media (max-width: 992px){
+  .pay-wrap{grid-template-columns:1fr; gap:22px}
+  .pay-card{order:2}
+  .pay-intro{order:1; padding-right:0}
+}
+@media (max-width: 640px){
+  .pay-hero{padding:48px 0 24px}
+  .faq-grid{grid-template-columns:1fr}
+  .btn{width:100%}
+  .fineprint{font-size:.85rem}
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" style="text-decoration:none">
+        <img src="assets/castora_logo.png" alt="Castora logo" style="height:36px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
+        <div class="wordmark">Castora Systems</div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <i data-feather="menu" aria-hidden="true"></i>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="team.html">Team</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html" style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem .77rem; font-size:.875em; box-shadow:var(--shadow);" class="btn">Get started for free</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="pay-hero">
+    <div class="container pay-wrap">
+      <div class="pay-intro">
+        <div class="kicker">Early access · Free trial</div>
+        <h1 class="pay-title">Reserve your spot — no charge today</h1>
+        <p class="lede">
+          Start a <strong>2-month free trial</strong> now. We’ll open access in ~6 weeks, then you’ll have ~2 weeks of hands-on time before any billing. Cancel anytime during the trial.
+        </p>
+
+        <div class="pay-cta">
+          <a href="https://buy.stripe.com/aFa7sKacKgfD3627Pt0co00"
+             class="btn primary"
+             style="background:#60A5FA"
+             target="_blank" rel="noopener"
+             aria-label="Start 2-month free trial via Stripe (opens in new tab)">
+            Start 2-month free trial
+          </a>
+          <div class="pay-trust">
+            <span class="dot-ink" aria-hidden="true"></span> Payments handled by Stripe
+          </div>
+        </div>
+
+        <p class="fineprint">
+          By starting a 2-month free trial, you authorize Castora to store your payment method and automatically charge
+          <strong>$9.99/month</strong> after the trial unless you cancel. You can cancel anytime during the trial to avoid charges.
+        </p>
+      </div>
+
+      <aside class="pay-card" role="region" aria-label="How billing works">
+        <h3 class="pay-card-title">How billing works</h3>
+        <ol class="steps">
+          <li>
+            <span class="step-label">Today</span>
+            <span class="step-copy">Save your card securely with Stripe — <em>no charge today</em>. Your 2-month trial starts now.</span>
+          </li>
+          <li>
+            <span class="step-label">~6 weeks from now</span>
+            <span class="step-copy">We turn on access. Try Castora with your own workflows.</span>
+          </li>
+          <li>
+            <span class="step-label">60 days from now</span>
+            <span class="step-copy">Do nothing to continue at <strong>$9.99/month</strong>, or cancel before the trial ends.</span>
+          </li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="pay-faq" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 id="faq-title" class="section-title">Common questions</h2>
+      <div class="faq-grid">
+        <div class="card">
+          <h4>Will I be charged today?</h4>
+          <p class="sm">No. You won’t be charged unless you keep the subscription past the 2-month trial.</p>
+        </div>
+        <div class="card">
+          <h4>Why is the trial two months?</h4>
+          <p class="sm">It covers our build period (~6 weeks) plus ~2 weeks for evaluation before any billing.</p>
+        </div>
+        <div class="card">
+          <h4>How do I cancel?</h4>
+          <p class="sm">Use the customer-portal link in your Stripe email receipt, or contact us. Cancel during trial to avoid charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand">
+        <img src="assets/castora_logo.png" alt="Castora logo" />
+        <div>
+          <div class="wordmark" style="font-size:1.15rem">Castora Systems</div>
+          <div class="sm muted">The co-pilot every systems engineer needs.</div>
+        </div>
+      </div>
+      <div class="sm" style="justify-self:end">
+        <a href="features.html" class="muted" style="margin-right:12px">Features</a>
+        <a href="team.html" class="muted" style="margin-right:12px">Team</a>
+        <a href="faqs.html" class="muted" style="margin-right:12px">FAQ</a>
+        <span class="muted">© <span id="year"></span> Castora</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('active');
+      });
+    });
+    function initIcons(){ if(window.feather && typeof window.feather.replace === 'function'){ window.feather.replace(); } }
+    if(document.readyState==='complete' || document.readyState==='interactive'){ setTimeout(initIcons,10); } else { document.addEventListener('DOMContentLoaded', initIcons); }
+  </script>
+  <script src="/header_test.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</body>
+</html>
