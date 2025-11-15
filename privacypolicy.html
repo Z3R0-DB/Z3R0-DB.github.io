@@ -212,8 +212,9 @@
         text-align: left !important;
       }
        h1 {
-        font-size: 2rem;
-        line-height: 1.15;
+        font-size: 1.6rem !important;
+        line-height: 1.25 !important;
+        word-break: normal !important;
       }
       .lede {
         font-size: 1rem;
@@ -253,7 +254,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header>
+    <header>
     <div class="container nav">
       <a class="brand" href="index.html" style="text-decoration:none">
         <img src="assets/castora_logo.png" alt="Castora logo" style="height:41.4px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
@@ -272,65 +273,135 @@
     </div>
   </header>
 
-  <main>
-    <section class="container hero">
-      <div>
-        <div class="kicker">AI for Systems Engineering</div>
-        <h1>The co-pilot every systems engineer needs</h1>
-        <p class="lede">Castora helps engineers reuse what works, refine what doesn't, and build what's next — efficiently and effectively.</p>
-        <form class="primary-actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1.5rem;" onsubmit="event.preventDefault(); window.location.href='contact.html';">
-          <input
-            type="email"
-            required
-            placeholder="Enter your email"
-            style="padding:.63rem 1rem; border-radius:12px; border:1.5px solid #d1d5db; font-size:.98em; min-width:220px; outline:none;"
-          />
-          <button
-            type="submit"
-            class="btn"
-            style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem 1.2rem; font-size:.875em; box-shadow:var(--shadow); border:none; cursor:pointer;"
-          >
-            Get started for free
-          </button>
-        </form>
-      </div>
-      <aside style="background:transparent; box-shadow:none; padding:0; display:flex; justify-content:center; align-items:center;">
-        <img src="assets/Updated product example.png" alt="Castora product screenshot" style="width:100%; max-width:1200px; border-radius:16px; box-shadow:none; display:block;">
-      </aside>
-    </section>
-    <section class="container" style="margin-top:3px;">
-      <!-- 3 modules/cards in a grid -->
-       <div class="kicker">Key features</div>
-      <div class="grid" style="margin-top:10;">
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/reuse_card.png" alt="" style="width:80%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Reuse Analysis</h3>
-          <p style="color:var(--muted); margin:0;">Get clear guidance on reusability of a subsystem or component fast, by inputting existing documentation and other relevant information.</p>
-        </div>
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/requirements_card.png" alt="" style="width:80%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Requirements Check</h3>
-          <p style="color:var(--muted); margin:0;">Instantly reviews your system requirements for completeness, consistency, and clarity so you can prevent costly rework before it starts.</p>
-        </div>
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/generate_card.png" alt="" style="width:80%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Generate Requirements</h3>
-          <p style="color:var(--muted); margin:0;">Generates clear, verifiable requirements for your next-generation or brand new systems fast, leveraging any documentation inputted.</p>
-        </div>
-  </div>
-  <!-- Wide box above the modules -->
-    <div class="kicker" style="margin-top:40px;">Enabled by</div>
-    <div class="feature-intro" style="background:white; border:1px solid color-mix(in oklab, var(--muted), white 60%); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px 36px 24px 36px; margin-bottom:32px; margin-top:32px">
-        <ul style="font-size:1.13rem; color:var(--muted); margin:0 0 0 1.2em; padding:0; line-height:1.7;">
-          <li><b>Expanded, reliable memory:</b> LLM orchestration ensures Castora remembers all information you input.</li>
-          <li><b>Security-first approach to data management and processing:</b> speed up your workflows with confidence.</li>
-          <li><b>Keep your Requirements Management:</b> import & export from DOORS, JAMA, JIRA and more.</li>
-        </ul>
-    </div>
-</section>
-  </main>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 style="word-break: keep-all; overflow-wrap: normal;">Privacy Policy</h1>
+                <p class="subtitle">Effective Date: November 15, 2025<br>Last Updated: November 15, 2025<br>Website: <a href="https://www.castora.systems" style="color:var(--accent)">https://www.castora.systems</a></p>
+            </div>
+        </section>
 
-  <footer>
+        <section class="content-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2>1. Overview</h2>
+                    <p>Castora Systems ("Castora," "we," "our," or "us") is a product of Strata Wireless, LLC, a Delaware limited liability company (Entity No. B20250049387).</p>
+                    <p>This Privacy Policy describes how we collect, use, store, and protect your personal data when you use our products and services, including the Castora Systems platform and related applications.</p>
+                    <p><strong>We are committed to privacy, security, and compliance with applicable data protection laws, including GDPR, CCPA, and other relevant frameworks.</strong></p>
+
+                    <h2>2. Information We Collect</h2>
+                    
+                    <h3 style="color:var(--ink); font-size:1.1rem; margin-top:1.5rem">a. Account Information</h3>
+                    <p>We collect basic account data such as name, email address, and password. Passwords are salted and hashed before storage — never stored in plaintext.</p>
+
+                    <h3 style="color:var(--ink); font-size:1.1rem; margin-top:1.5rem">b. Project and Usage Data</h3>
+                    <p>We collect data you submit to the platform (e.g., project descriptions, documentation, and analysis inputs) to generate system and requirements analyses.</p>
+
+                    <h3 style="color:var(--ink); font-size:1.1rem; margin-top:1.5rem">c. Technical Data</h3>
+                    <p>We collect IP addresses, browser type, and operating system for analytics and security monitoring.</p>
+
+                    <h3 style="color:var(--ink); font-size:1.1rem; margin-top:1.5rem">d. Integrations</h3>
+                    <p>If you connect a third-party service (e.g., GitHub, Supabase, or OpenAI), we collect identifiers necessary for that integration, subject to the provider's own privacy policy.</p>
+
+                    <h2>3. How We Use Your Data</h2>
+                    <p>We use data to:</p>
+                    <ul>
+                        <li>Operate, maintain, and improve Castora services</li>
+                        <li>Authenticate users and secure access</li>
+                        <li>Provide AI-generated analyses and insights</li>
+                        <li>Communicate updates or respond to support requests</li>
+                        <li>Fulfill legal and regulatory obligations</li>
+                    </ul>
+                    <p><strong>We never use your data—inputs or outputs—for model training or improvement.</strong></p>
+
+                    <h2>4. Data Security</h2>
+                    <p>We implement strong, industry-standard protections:</p>
+                    <ul>
+                        <li>AES-256 encryption at rest</li>
+                        <li>TLS 1.2+ encryption in transit</li>
+                        <li>Hosting and APIs through Supabase, Netlify, and OpenAI, which maintain SOC 2 Type 2 and ISO 27001/17/18/27701 certifications</li>
+                    </ul>
+                    <p>Your project data is encrypted and accessible only by authorized users.</p>
+
+                    <h2>5. Sub-Processors</h2>
+                    <p>We rely on select service providers ("sub-processors") to operate Castora securely:</p>
+                    <table style="width:100%; border-collapse:collapse; margin:1.5rem 0">
+                        <thead>
+                            <tr style="background:color-mix(in oklab, var(--muted), white 85%); text-align:left">
+                                <th style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Sub-Processor</th>
+                                <th style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Function</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">OpenAI</td>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">AI inference and content generation</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Supabase</td>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Database and authentication</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Netlify</td>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Hosting and delivery</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">GitHub</td>
+                                <td style="padding:12px; border:1px solid color-mix(in oklab, var(--muted), white 70%)">Source control and CI/CD infrastructure</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>We may update this list as our infrastructure evolves; changes will be posted to this page with the revision date.</p>
+
+                    <h2>6. International Data Transfers</h2>
+                    <p>We store and process data primarily in the United States.</p>
+                    <p>If you access Castora from outside the U.S., your information may be transferred internationally.</p>
+                    <p>When required, we use Standard Contractual Clauses (SCCs) or equivalent safeguards to ensure adequate protection.</p>
+
+                    <h2>7. Data Retention and Deletion</h2>
+                    <p>You may request data deletion or a "zero data retention" configuration at any time.</p>
+                    <p>Upon written request, we will delete your data and provide confirmation.</p>
+                    <p>For legal, security, or operational reasons, we may retain minimal records (e.g., audit logs) as required by law.</p>
+
+                    <h2>8. Children's Privacy</h2>
+                    <p>Castora is not directed at children under 13 and does not knowingly collect personal data from them.</p>
+                    <p>If you believe a child's data has been submitted, contact <a href="mailto:support@castora.systems" style="color:var(--accent)">support@castora.systems</a> for immediate deletion.</p>
+
+                    <h2>9. User Rights (GDPR & CCPA)</h2>
+                    <p>Depending on your jurisdiction, you may:</p>
+                    <ul>
+                        <li>Access or correct your data</li>
+                        <li>Request deletion or restriction of processing</li>
+                        <li>Request data portability</li>
+                        <li>Opt out of data sales (we do not sell data)</li>
+                    </ul>
+                    <p>To exercise these rights, email <a href="mailto:support@castora.systems" style="color:var(--accent)">support@castora.systems</a>.</p>
+                    <p>If you are in the EU/EEA, you may also contact your local data protection authority.</p>
+
+                    <h2>10. Cookies and Analytics</h2>
+                    <p>We use minimal analytics (e.g., Netlify Insights) for site reliability and product improvement.</p>
+                    <p>You can disable cookies in your browser; doing so may limit functionality.</p>
+
+                    <h2>11. Data Breach Notification</h2>
+                    <p>In the event of a data breach impacting your information, we will notify you within 72 hours of discovery, consistent with applicable law, and outline mitigation steps.</p>
+
+                    <h2>12. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy periodically.</p>
+                    <p>Material changes will be communicated before they take effect via email or in-app notice.</p>
+
+                    <h2>13. Contact</h2>
+                    <p>
+                        <strong>Strata Wireless, LLC</strong><br>
+                        Product: Castora Systems<br>
+                        Email: <a href="mailto:support@castora.systems" style="color:var(--accent)">support@castora.systems</a>
+                    </p>
+                    <p style="margin-top:2rem; color:var(--muted); font-size:0.9rem">© 2025 Strata Wireless, LLC. Castora Systems is a product of Strata Wireless, LLC.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
     <div class="container footer-grid">
       <div class="brand">
         <img src="assets/castora_logo.png" alt="Castora logo" />
@@ -340,47 +411,14 @@
         </div>
       </div>
       <div class="sm" style="justify-self:end">
-        <a href="#features" class="muted" style="margin-right:12px">Features</a>
-        <a href="#team" class="muted" style="margin-right:12px">Team</a>
-        <a href="#faq" class="muted" style="margin-right:12px">FAQ</a>
+        <a href="index.html#features" class="muted" style="margin-right:12px">Features</a>
+        <a href="index.html#team" class="muted" style="margin-right:12px">Team</a>
+        <a href="index.html#faq" class="muted" style="margin-right:12px">FAQ</a>
         <a href="privacypolicy.html" class="muted" style="margin-right:12px">Privacy</a>
         <a href="termsandconditions.html" class="muted" style="margin-right:12px">Terms</a>
-        <!-- <a href="contact.html" class="muted" style="margin-right:12px">Contact</a>
-        <a href="#" class="muted" style="margin-right:12px">Privacy</a>
-        <a href="#" class="muted" style="margin-right:12px">Terms</a> -->
         <span class="muted">© <span id="year"></span> Castora</span>
       </div>
     </div>
   </footer>
-
-  <script>
-    // set current year, smooth scroll
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href');
-        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
-      })
-    })
-    // Initialize Feather icons when DOM is ready (feather script loaded at end)
-    function initIcons(){ if(window.feather && typeof window.feather.replace === 'function'){ window.feather.replace(); } }
-    if(document.readyState==='complete' || document.readyState==='interactive'){ setTimeout(initIcons,10); } else { document.addEventListener('DOMContentLoaded', initIcons); }
-    
-    // Mobile navigation toggle
-    function toggleNav() {
-      const navMenu = document.getElementById('navMenu');
-      navMenu.classList.toggle('active');
-    }
-    
-    // Close mobile nav when clicking on links
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navMenu').classList.remove('active');
-      });
-    });
-  </script>
-  <script src="/header_test.js"></script>
-  <!-- Feather icons CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" integrity="" crossorigin="anonymous"></script>
 </body>
 </html>

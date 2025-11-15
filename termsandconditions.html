@@ -212,8 +212,9 @@
         text-align: left !important;
       }
        h1 {
-        font-size: 2rem;
-        line-height: 1.15;
+        font-size: 1.6rem !important;
+        line-height: 1.25 !important;
+        word-break: normal !important;
       }
       .lede {
         font-size: 1rem;
@@ -253,7 +254,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header>
+    <header>
     <div class="container nav">
       <a class="brand" href="index.html" style="text-decoration:none">
         <img src="assets/castora_logo.png" alt="Castora logo" style="height:41.4px;width:auto;filter:drop-shadow(0 1px 0 rgba(0,0,0,.05))" />
@@ -272,65 +273,107 @@
     </div>
   </header>
 
-  <main>
-    <section class="container hero">
-      <div>
-        <div class="kicker">AI for Systems Engineering</div>
-        <h1>The co-pilot every systems engineer needs</h1>
-        <p class="lede">Castora helps engineers reuse what works, refine what doesn't, and build what's next — efficiently and effectively.</p>
-        <form class="primary-actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1.5rem;" onsubmit="event.preventDefault(); window.location.href='contact.html';">
-          <input
-            type="email"
-            required
-            placeholder="Enter your email"
-            style="padding:.63rem 1rem; border-radius:12px; border:1.5px solid #d1d5db; font-size:.98em; min-width:220px; outline:none;"
-          />
-          <button
-            type="submit"
-            class="btn"
-            style="background:#60A5FA; color:#fff; font-weight:700; border-radius:12px; padding:.63rem 1.2rem; font-size:.875em; box-shadow:var(--shadow); border:none; cursor:pointer;"
-          >
-            Get started for free
-          </button>
-        </form>
-      </div>
-      <aside style="background:transparent; box-shadow:none; padding:0; display:flex; justify-content:center; align-items:center;">
-        <img src="assets/Updated product example.png" alt="Castora product screenshot" style="width:100%; max-width:1200px; border-radius:16px; box-shadow:none; display:block;">
-      </aside>
-    </section>
-    <section class="container" style="margin-top:3px;">
-      <!-- 3 modules/cards in a grid -->
-       <div class="kicker">Key features</div>
-      <div class="grid" style="margin-top:10;">
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/reuse_card.png" alt="" style="width:80%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Reuse Analysis</h3>
-          <p style="color:var(--muted); margin:0;">Get clear guidance on reusability of a subsystem or component fast, by inputting existing documentation and other relevant information.</p>
-        </div>
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/requirements_card.png" alt="" style="width:80%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Requirements Check</h3>
-          <p style="color:var(--muted); margin:0;">Instantly reviews your system requirements for completeness, consistency, and clarity so you can prevent costly rework before it starts.</p>
-        </div>
-        <div class="card" style="display:flex; flex-direction:column; align-items:flex-start;">
-          <img src="assets/generate_card.png" alt="" style="width:80%; margin-bottom:12px;">
-          <h3 style="margin:0 0 8px 0; font-size:1.23rem;">Generate Requirements</h3>
-          <p style="color:var(--muted); margin:0;">Generates clear, verifiable requirements for your next-generation or brand new systems fast, leveraging any documentation inputted.</p>
-        </div>
-  </div>
-  <!-- Wide box above the modules -->
-    <div class="kicker" style="margin-top:40px;">Enabled by</div>
-    <div class="feature-intro" style="background:white; border:1px solid color-mix(in oklab, var(--muted), white 60%); border-radius:var(--radius); box-shadow:var(--shadow); padding:32px 36px 24px 36px; margin-bottom:32px; margin-top:32px">
-        <ul style="font-size:1.13rem; color:var(--muted); margin:0 0 0 1.2em; padding:0; line-height:1.7;">
-          <li><b>Expanded, reliable memory:</b> LLM orchestration ensures Castora remembers all information you input.</li>
-          <li><b>Security-first approach to data management and processing:</b> speed up your workflows with confidence.</li>
-          <li><b>Keep your Requirements Management:</b> import & export from DOORS, JAMA, JIRA and more.</li>
-        </ul>
-    </div>
-</section>
-  </main>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Terms and Conditions</h1>
+                <p class="subtitle">Effective Date: November 15, 2025<br>Last Updated: November 15, 2025</p>
+            </div>
+        </section>
 
-  <footer>
+        <section class="content-section">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2>1. Introduction</h2>
+                    <p>Castora Systems ("Castora," "we," "our," or "us") is a product of Strata Wireless, LLC, a Delaware limited liability company (Entity No. B20250049387).</p>
+                    <p>These Terms & Conditions ("Terms") govern your use of Castora's products and services.</p>
+                    <p><strong>By using Castora, you agree to these Terms. If you do not agree, do not access or use the platform.</strong></p>
+
+                    <h2>2. Services</h2>
+                    <p>Castora provides AI-assisted engineering tools for requirements generation, system analysis, and related functions.</p>
+                    <p>We may modify or discontinue any part of the service at our discretion.</p>
+
+                    <h2>3. Eligibility</h2>
+                    <p>You must be at least 18 years old or authorized to act on behalf of an organization.</p>
+                    <p>By creating an account, you represent that all information you provide is accurate.</p>
+
+                    <h2>4. Account Responsibilities</h2>
+                    <p>You are responsible for:</p>
+                    <ul>
+                        <li>Maintaining confidentiality of your login credentials</li>
+                        <li>Ensuring data accuracy</li>
+                        <li>Avoiding resale or unauthorized sharing of access</li>
+                    </ul>
+                    <p>We may suspend accounts that violate these Terms or compromise security.</p>
+
+                    <h2>5. Fees and Billing</h2>
+                    <p>If we introduce paid tiers or subscriptions, fees will be disclosed in-app or via order form.</p>
+                    <p>Payments are due per the terms presented at purchase; all fees are non-refundable except as required by law.</p>
+                    <p>We reserve the right to modify pricing with prior notice.</p>
+
+                    <h2>6. Service Availability</h2>
+                    <p>We strive for consistent uptime but provide no guaranteed availability.</p>
+                    <p>Scheduled maintenance or unforeseen outages may occur; we are not liable for service interruptions.</p>
+
+                    <h2>7. Intellectual Property</h2>
+                    <p>All software, algorithms, and designs remain the property of Strata Wireless, LLC.</p>
+                    <p>You retain ownership of your uploaded content and grant us a limited, revocable license to process it solely to deliver the service.</p>
+
+                    <h2>8. Acceptable Use</h2>
+                    <p>You may not:</p>
+                    <ul>
+                        <li>Reverse-engineer, scrape, or copy the platform</li>
+                        <li>Upload malware or infringing content</li>
+                        <li>Use Castora to develop a competing service</li>
+                        <li>Violate applicable laws or third-party rights</li>
+                    </ul>
+
+                    <h2>9. Third-Party Services</h2>
+                    <p>Castora integrates with OpenAI, Supabase, Netlify, and GitHub.</p>
+                    <p>Their terms and privacy policies govern those services.</p>
+                    <p>We are not responsible for failures or breaches caused by third-party providers.</p>
+
+                    <h2>10. Disclaimers and Limitation of Liability</h2>
+                    <p>Castora is provided "as is" and "as available."</p>
+                    <p>We disclaim all warranties, including merchantability, fitness for purpose, and non-infringement.</p>
+                    <p>To the fullest extent permitted by law, Strata Wireless, LLC shall not be liable for:</p>
+                    <ul>
+                        <li>Indirect, incidental, special, or consequential damages</li>
+                        <li>Loss of data, revenue, or profits</li>
+                        <li>Failures by third-party integrations</li>
+                    </ul>
+                    <p>Total liability shall not exceed the fees paid to Castora in the prior 12 months.</p>
+
+                    <h2>11. Dispute Resolution and Arbitration</h2>
+                    <p>Before pursuing legal action, both parties agree to attempt good-faith negotiation or mediation.</p>
+                    <p>Any dispute arising out of these Terms shall be resolved by binding arbitration under the rules of the American Arbitration Association in San Francisco County, California, unless the parties mutually agree otherwise.</p>
+                    <p>You waive any right to participate in class-action lawsuits.</p>
+
+                    <h2>12. Governing Law</h2>
+                    <p>These Terms are governed by the laws of the State of California, without regard to conflicts of law principles.</p>
+
+                    <h2>13. Termination</h2>
+                    <p>You may close your account at any time by emailing <a href="mailto:support@castora.systems" style="color:var(--accent)">support@castora.systems</a>.</p>
+                    <p>We may terminate or suspend access for violations or operational reasons.</p>
+                    <p>Upon termination, your data will be deleted in accordance with our Privacy Policy.</p>
+
+                    <h2>14. Changes to These Terms</h2>
+                    <p>We may modify these Terms from time to time.</p>
+                    <p>Material updates will be announced before they take effect via email or in-app notice.</p>
+
+                    <h2>15. Contact</h2>
+                    <p>
+                        <strong>Strata Wireless, LLC</strong><br>
+                        Product: Castora Systems<br>
+                        Email: <a href="mailto:support@castora.systems" style="color:var(--accent)">support@castora.systems</a>
+                    </p>
+                    <p style="margin-top:2rem; color:var(--muted); font-size:0.9rem">© 2025 Strata Wireless, LLC. Castora Systems is a product of Strata Wireless, LLC.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
     <div class="container footer-grid">
       <div class="brand">
         <img src="assets/castora_logo.png" alt="Castora logo" />
@@ -340,47 +383,14 @@
         </div>
       </div>
       <div class="sm" style="justify-self:end">
-        <a href="#features" class="muted" style="margin-right:12px">Features</a>
-        <a href="#team" class="muted" style="margin-right:12px">Team</a>
-        <a href="#faq" class="muted" style="margin-right:12px">FAQ</a>
+        <a href="index.html#features" class="muted" style="margin-right:12px">Features</a>
+        <a href="index.html#team" class="muted" style="margin-right:12px">Team</a>
+        <a href="index.html#faq" class="muted" style="margin-right:12px">FAQ</a>
         <a href="privacypolicy.html" class="muted" style="margin-right:12px">Privacy</a>
         <a href="termsandconditions.html" class="muted" style="margin-right:12px">Terms</a>
-        <!-- <a href="contact.html" class="muted" style="margin-right:12px">Contact</a>
-        <a href="#" class="muted" style="margin-right:12px">Privacy</a>
-        <a href="#" class="muted" style="margin-right:12px">Terms</a> -->
         <span class="muted">© <span id="year"></span> Castora</span>
       </div>
     </div>
   </footer>
-
-  <script>
-    // set current year, smooth scroll
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href');
-        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
-      })
-    })
-    // Initialize Feather icons when DOM is ready (feather script loaded at end)
-    function initIcons(){ if(window.feather && typeof window.feather.replace === 'function'){ window.feather.replace(); } }
-    if(document.readyState==='complete' || document.readyState==='interactive'){ setTimeout(initIcons,10); } else { document.addEventListener('DOMContentLoaded', initIcons); }
-    
-    // Mobile navigation toggle
-    function toggleNav() {
-      const navMenu = document.getElementById('navMenu');
-      navMenu.classList.toggle('active');
-    }
-    
-    // Close mobile nav when clicking on links
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navMenu').classList.remove('active');
-      });
-    });
-  </script>
-  <script src="/header_test.js"></script>
-  <!-- Feather icons CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" integrity="" crossorigin="anonymous"></script>
 </body>
 </html>
