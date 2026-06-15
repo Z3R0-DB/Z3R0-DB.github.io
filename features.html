@@ -93,6 +93,10 @@
     .video-container{position:relative; width:100%; height:0; padding-bottom:56.25%; /* 16:9 aspect ratio */}
     .video-container iframe{position:absolute; top:0; left:0; width:100%; height:100%; border-radius:16px; box-shadow:0 8px 32px rgba(54,60,76,.13); border:none}
 
+    /* Demo grid: side-by-side on desktop, stacked on mobile */
+    .demo-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:0}
+    .demo-item{text-align:center}
+
     /* Responsive */
     @media (max-width: 768px){
       .container{width:min(100%, 95%)}
@@ -143,6 +147,7 @@
       /* Section spacing */
       section{padding:48px 0}
       .grid{grid-template-columns:1fr; gap:16px}
+      .demo-grid{grid-template-columns:1fr}
       
       /* Cards */
       .card{padding:20px}
@@ -290,16 +295,35 @@
       </div>
     </section>
     <section id="demo" style="padding:0 0 48px 0; text-align:center">
-      <h3 class="section-title" style="margin-bottom:8px">Demo: Reuse Subsystem Analysis</h3>
-      <p class="muted" style="margin-top:0; margin-bottom:18px; max-width:880px; margin-inline:auto">
-        See how Castora analyzes and generates a report on the feasibility of reusing an existing subsystem or component.
-      </p>
-      <div class="video-container">
-        <iframe
-          src="https://drive.google.com/file/d/1j85ybc9daycEmFxqcuX1JYsQpDmx4EiO/preview"
-          width="800" height="450" allow="autoplay"
-          title="Demonstration of the Reuse Analysis Workflow">
-        </iframe>
+      <div class="demo-grid">
+        <div class="demo-item">
+          <h3 class="section-title" style="margin-bottom:8px">Demo: Requirements Generation</h3>
+          <p class="muted" style="margin-top:0; margin-bottom:18px">
+            See how Castora generates complete, testable requirements for a new system from your engineering documentation and guidance.
+          </p>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/Hpf25nxjduk?rel=0&modestbranding=1"
+              width="800" height="450"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              title="Demonstration of the Requirements Generation Workflow">
+            </iframe>
+          </div>
+        </div>
+        <div class="demo-item">
+          <h3 class="section-title" style="margin-bottom:8px">Demo: Reuse Subsystem Analysis</h3>
+          <p class="muted" style="margin-top:0; margin-bottom:18px">
+            See how Castora analyzes and generates a report on the feasibility of reusing an existing subsystem or component.
+          </p>
+          <div class="video-container">
+            <iframe
+              src="https://drive.google.com/file/d/1j85ybc9daycEmFxqcuX1JYsQpDmx4EiO/preview"
+              width="800" height="450" allow="autoplay"
+              title="Demonstration of the Reuse Analysis Workflow">
+            </iframe>
+          </div>
+        </div>
       </div>
     </section>
   </main>
